@@ -1,0 +1,6 @@
+<tr v-for="x in shop">
+<td><input type="text"  :value="x"  id="one" ></td>
+</tr>
+
+
+给value设置成x的值

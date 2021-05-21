@@ -1,0 +1,46 @@
+# 导包
+import time
+from selenium import webdriver
+from selenium.webdriver.common.action_chains import ActionChains   #双击按钮需要导入的包
+
+#初始化引擎，打开页面
+driver=webdriver.Chrome()
+url='https://www.mikecrm.com/login.php'
+driver.get(url=url)
+driver.implicitly_wait(5)   #隐士等待，等待页面元素加载完毕
+
+#登陆
+driver.find_element_by_xpath('//*[@id="login_wrapper"]/div/div[1]/div/div/div[2]/div[2]/div[2]/div/div[1]/input').send_keys('1511720234@qq.com')
+time.sleep(0.1)
+driver.find_element_by_xpath('//*[@id="login_wrapper"]/div/div[1]/div/div/div[2]/div[2]/div[3]/div/div[1]/input').send_keys('Bao087671.')
+time.sleep(0.1)
+driver.find_element_by_xpath('//*[@id="login_wrapper"]/div/div[1]/div/div/div[2]/div[2]/div[4]/a').click()
+driver.implicitly_wait(5)
+
+#点击表单按钮
+driver.find_element_by_xpath('//*[@id="header"]/div/div/ul/li[2]/a').click()
+driver.implicitly_wait(5)
+
+#点击查看反馈
+driver.find_element_by_xpath('//*[@id="mklgscrollcom914"]/ul/li[2]/div/div[2]/p/a').click()
+driver.implicitly_wait(5)
+
+
+
+for x in range(39,45):
+    # 出现详情页面
+    appear = driver.find_element_by_xpath('//*[@id="mklgscrollcom915"]/ul/li[{}]'.format(x))
+    ActionChains(driver).double_click(appear).perform()
+    time.sleep(1)
+
+    print(driver.find_element_by_xpath('//*[@id="mklgscrollcom916"]/ul/li[1]/div/div[1]/p').text)
+
+    # 使详情页面消失
+    disappear = driver.find_element_by_xpath('//*[@id="mklgscrollcom915"]/ul/li[{}]/div/div[3]/a'.format(x)).click()
+    time.sleep(1)
+
+    driver.execute_script("arguments[0].scrollIntoView(false);", appear)
+    # js = "var q=document.documentElement.scrollTop=10000"
+    # driver.execute_script(js)
+    # time.sleep(2)
+

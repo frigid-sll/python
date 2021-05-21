@@ -1,0 +1,24 @@
+import hashlib  
+import os,time
+from mtt2.settings import STATICFILES_DIRS
+
+def md5(str):
+    m = hashlib.md5() # 实例化一个md5对象
+    m.update(str.encode()) # 将时间解码后添加进去
+    return m.hexdigest() # 返回绝对唯一的md5值
+
+now = str(time.time())
+        md = md5(now)
+        path = os.path.join(STATICFILES_DIRS[0],'img/'+md+'.'+file.name.split('.')[-1] )
+img_path = 'img/'+md+'.'+file.name.split('.')[-1]
+f.read()：读取整个上传文件的内容，适合小文件上传
+f.chunks()：返回一个类似生成器（<class 'generator'>）的数据，每一次读取按块返回文件，可以通过for迭代访问其中数据；适合上传大文件到服务器。
+f.multiple_chunks()：返回文件大小，当文件大小大于2.5M时，返回True，反之返回False，可以通过该函数来选择是否使用chunks方法或read直接存储。
+
+ with open(path,'wb')as f:
+                if file.multiple_chunks():
+                    file_yield = file.chunks()
+                    for i in file_yield:
+                        f.write(i)
+                else:
+                    f.write(file.read())

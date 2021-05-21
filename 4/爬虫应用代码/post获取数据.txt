@@ -1,0 +1,16 @@
+def update_msg(request):
+    account=request.session['account']
+    if request.method=='POST':
+        head=request.FILES.get('head')
+        name=request.POST.get('name')
+        age=request.POST.get('age')
+        gender=request.POST.get('gender')
+        password=request.POST.get('password')
+        if head:
+            head_url = os.path.join(settings.STATICFILES_DIRS[0],'img/'+head.name)
+            with open(head_url,'wb') as f:
+                f.write(head.read())
+            models.User.objects.filter(account=account).update(name=name,age=age,gender=gender,password=password,head=head_url)
+        else:
+            models.User.objects.filter(account=account).update(name=name,age=age,gender=gender,password=password)
+    return redirect(reverse('user:index')) 

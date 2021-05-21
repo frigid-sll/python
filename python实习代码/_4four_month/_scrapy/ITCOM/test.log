@@ -1,0 +1,793 @@
+2019-02-21 21:24:26 [scrapy.utils.log] INFO: Scrapy 1.5.1 started (bot: ITCOM)
+2019-02-21 21:24:26 [scrapy.utils.log] INFO: Versions: lxml 4.3.0.0, libxml2 2.9.5, cssselect 1.0.3, parsel 1.5.1, w3lib 1.20.0, Twisted 18.9.0, Python 3.7.2 (tags/v3.7.2:9a3ffc0492, Dec 23 2018, 23:09:28) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 19.0.0 (OpenSSL 1.1.0j  20 Nov 2018), cryptography 2.4.2, Platform Windows-10-10.0.17134-SP0
+2019-02-21 21:24:26 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'ITCOM', 'CONCURRENT_REQUESTS': 32, 'DOWNLOAD_DELAY': 0.1, 'FEED_EXPORT_ENCODING': 'utf-8', 'LOG_FILE': './test.log', 'NEWSPIDER_MODULE': 'ITCOM.spiders', 'SPIDER_MODULES': ['ITCOM.spiders'], 'USER_AGENT': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36'}
+2019-02-21 21:24:27 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2019-02-21 21:24:27 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2019-02-21 21:24:27 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2019-02-21 21:24:27 [scrapy.middleware] INFO: Enabled item pipelines:
+['scrapy.pipelines.images.ImagesPipeline', 'ITCOM.pipelines.ItcomPipeline']
+2019-02-21 21:24:27 [scrapy.core.engine] INFO: Spider opened
+2019-02-21 21:24:27 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-02-21 21:24:27 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6023
+2019-02-21 21:24:27 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.citreport.com/news/it/> (referer: None)
+2019-02-21 21:24:28 [scrapy.spidermiddlewares.offsite] DEBUG: Filtered offsite request to 'www.citreport.com': <GET http://www.citreport.com/content/45649-1.html>
+2019-02-21 21:24:28 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.citreport.com/news/it/> (referer: None)
+Traceback (most recent call last):
+  File "c:\py\test\venv\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "c:\py\test\venv\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "c:\py\test\venv\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "c:\py\test\venv\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "c:\py\test\venv\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\py\第四月\ITCOM\ITCOM\spiders\ITcom.py", line 24, in parse
+    item['image_urls'] = [images[index]]  #图片链接
+IndexError: list index out of range
+2019-02-21 21:24:28 [scrapy.core.engine] INFO: Closing spider (finished)
+2019-02-21 21:24:28 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 305,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 15977,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2019, 2, 21, 13, 24, 28, 114872),
+ 'log_count/DEBUG': 3,
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 7,
+ 'offsite/domains': 1,
+ 'offsite/filtered': 7,
+ 'request_depth_max': 1,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'spider_exceptions/IndexError': 1,
+ 'start_time': datetime.datetime(2019, 2, 21, 13, 24, 27, 430905)}
+2019-02-21 21:24:28 [scrapy.core.engine] INFO: Spider closed (finished)
+2019-02-21 21:26:04 [scrapy.utils.log] INFO: Scrapy 1.5.1 started (bot: ITCOM)
+2019-02-21 21:26:04 [scrapy.utils.log] INFO: Versions: lxml 4.3.0.0, libxml2 2.9.5, cssselect 1.0.3, parsel 1.5.1, w3lib 1.20.0, Twisted 18.9.0, Python 3.7.2 (tags/v3.7.2:9a3ffc0492, Dec 23 2018, 23:09:28) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 19.0.0 (OpenSSL 1.1.0j  20 Nov 2018), cryptography 2.4.2, Platform Windows-10-10.0.17134-SP0
+2019-02-21 21:26:04 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'ITCOM', 'CONCURRENT_REQUESTS': 32, 'DOWNLOAD_DELAY': 0.1, 'FEED_EXPORT_ENCODING': 'utf-8', 'LOG_FILE': './test.log', 'NEWSPIDER_MODULE': 'ITCOM.spiders', 'SPIDER_MODULES': ['ITCOM.spiders'], 'USER_AGENT': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36'}
+2019-02-21 21:26:04 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2019-02-21 21:26:04 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2019-02-21 21:26:04 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2019-02-21 21:26:05 [scrapy.middleware] INFO: Enabled item pipelines:
+['scrapy.pipelines.images.ImagesPipeline', 'ITCOM.pipelines.ItcomPipeline']
+2019-02-21 21:26:05 [scrapy.core.engine] INFO: Spider opened
+2019-02-21 21:26:05 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-02-21 21:26:05 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6023
+2019-02-21 21:26:05 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.citreport.com/news/it/> (referer: None)
+2019-02-21 21:26:05 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.citreport.com/news/it/> (referer: None)
+Traceback (most recent call last):
+  File "c:\py\test\venv\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "c:\py\test\venv\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "c:\py\test\venv\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "c:\py\test\venv\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "c:\py\test\venv\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\py\第四月\ITCOM\ITCOM\spiders\ITcom.py", line 24, in parse
+    item['image_urls'] = [images[index]]  #图片链接
+IndexError: list index out of range
+2019-02-21 21:26:05 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.citreport.com/content/45595-1.html> (referer: http://www.citreport.com/news/it/)
+2019-02-21 21:26:05 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.citreport.com/content/45621-1.html> (referer: http://www.citreport.com/news/it/)
+2019-02-21 21:26:05 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.citreport.com/content/45626-1.html> (referer: http://www.citreport.com/news/it/)
+2019-02-21 21:26:05 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.citreport.com/content/45629-1.html> (referer: http://www.citreport.com/news/it/)
+2019-02-21 21:26:05 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.citreport.com/content/45637-1.html> (referer: http://www.citreport.com/news/it/)
+2019-02-21 21:26:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.citreport.com/content/45638-1.html> (referer: http://www.citreport.com/news/it/)
+2019-02-21 21:26:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.citreport.com/content/45649-1.html> (referer: http://www.citreport.com/news/it/)
+2019-02-21 21:26:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.citreport.com/data/attachment/portal/201902/20/133356oywydbiyviyp3mfz.jpg.thumb.jpg> (referer: None)
+2019-02-21 21:26:06 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET http://www.citreport.com/data/attachment/portal/201902/20/133356oywydbiyviyp3mfz.jpg.thumb.jpg> referred in <None>
+2019-02-21 21:26:06 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.citreport.com/content/45595-1.html>
+{'content2': '\r\n'
+             '               2019-2-21 10:09\r\n'
+             '作者: \r\n'
+             '\r\n'
+             '评论:\r\n'
+             '\r\n'
+             '\r\n'
+             '来源: 快科技\u3000\u30002月21日，\u3000\u3000'
+             '所有主营业务的盈利能力均获提升，推动总体税前利润年比年提升超过130%，达到24.2亿人民币，创联想有史以来新高!由去年同期净亏损近20亿人民币大幅改善为净利润16亿人民币。\u3000\u3000'
+             '中国作为家乡市场，在第三财季实现稳健增长，其中手机业务在北美市场亦取得历史性突破，通过调整产品策略，利润年比年增加6.3亿人民币。\u3000\u3000'
+             '联想集团董事长兼CEO杨元庆表示：“面对日益严峻的市场环境，我们目光高远，步伐坚定，取得了逆势绽放的骄人业绩。”\u3000\u3000'
+             '他还称：“这是四年前推行的战略开始展现出强有力的成效。联想就像是永不停歇的登山者，不断瞄准更高的目标。从一个峰顶到另一个峰顶，有时候意味着需要先下到山坳里，开发新工具、掌握新技能、寻找新路径，从而到达新的顶峰。但是对联想而言，目标一旦确定，就决不轻易放弃。”\u3000\u3000\u3000\u3000'
+             '营业额连续六个季度实现增长：Q3营业额为971亿人民币，年同比增长8.5%，连续第六个季度增长;\u3000\u3000'
+             '税前净利润创历史新高：达到24.2亿人民币，较去年同期提升超过130%，创联想历史新高;\u3000\u3000'
+             '所有业务部门实现增长：个人电脑及智能设备业务、移动业务和数据中心业务均实现增长;\u3000\u3000'
+             '移动业务实现扭亏为盈：自收购摩托罗拉移动以来首次实现全球盈利;\u3000\u3000'
+             '多个业务增长跑赢大盘：PC全球市场份额创历史新高达24.6%，稳居全球市场冠军，营业额年比年增长16%，跑赢大盘;\u3000\u3000'
+             '新业务引擎增长强劲：数据中心业务营业额继续保持双位数高增长，连续第五个季度实现盈利水平改善。\u3000\u3000\u3000\u3000'
+             '联想本财季所有业务都实现了盈利增长，IDG '
+             '智能设备业务集团(含PCSD和MBG)自2018年5月成立，IDG营业额和盈利能力持续增长，并于本季度取得了创纪录的营业额和利润，营业额年比年上升6.2%至860亿人民币，连续三个季度实现增长，其中：\u3000\u3000\u3000\u3000'
+             '个人电脑业务实现了创纪录的营业额和利润，营业额年比年增速达16%，超出大市17个百分点，税前利润率也改善了1个百分点。联想在全球PC市场份额达到24.6%，创下历史新高;PC+平板市场份额超过17%，在这两大市场都取得了冠军位置。\u3000\u3000'
+             '由于聚焦于高增长和高端产品细分的市场，如工作站、轻薄本、显示器，营业额均取得高于市场30%以上的年比年增长，游戏PC增速高于市场16%，Chromebook增速远超市场220%。\u3000\u3000\u3000\u3000'
+             '在完成对摩托罗拉移动的并购之后，在本财季首次实现扭亏为盈。联想表示，这一结果主要是得益于过去一段时间以来坚定执行既定战略：优化产品组合、聚焦关键市场、削减费用。\u3000\u3000'
+             '在区域市场表现方面：\u3000\u3000'
+             '拉美市场，尽管面临货币波动和供应紧缺的挑战，仍然保持了较强的盈利能力以及市场亚军位置。\u3000\u3000'
+             '北美市场，取得突破性进展，通过调整产品策略，销量增长超出大市40%，利润年比年改善6.3亿人民币。\u3000\u3000'
+             '中国市场，营业额四倍于去年同期，税前利润率大幅增长。\u3000\u3000\u3000\u3000'
+             '数据中心业务在第三财季的营业额继续保持了双位数增长，年比年增速超过30%，连续第五个季度实现盈利水平的改善。\u3000\u3000'
+             '主要得益于在超大规模数据中心和软件定义基础架构领域的强劲增长。超大规模数据中心业务营业额年比年增长高达三位数，软件定义基础架构领域年比年增长近70%，并继续稳居全球超级计算机排行榜的首位。\u3000\u3000'
+             '联想表示，未来数据中心业务集团将持续构筑技术领导力，打造端到端的产品组合。与NetApp在中国成立的合资公司将进一步加强集团在存储方面的产品组合能力及拓展业务版图。此外，还将强化在软件定义方面的能力，力争成为这个市场的领导者。网站导航\r\n'
+             ' \r\n'
+             '\r\n'
+             '\r\n'
+             '\r\n'
+             '            \r\n'
+             '                 \r\n'
+             '                \r\n'
+             '            ',
+ 'image_urls': ['http://www.citreport.com/data/attachment/portal/201902/20/133356oywydbiyviyp3mfz.jpg.thumb.jpg'],
+ 'images': [{'checksum': 'afacb9ddef5b0da67e5ef905457bec41',
+             'path': 'full/819245b198b5193f7d15fddd434477819ba67d09.jpg',
+             'url': 'http://www.citreport.com/data/attachment/portal/201902/20/133356oywydbiyviyp3mfz.jpg.thumb.jpg'}],
+ 'title': '联想第三季财报公布：营业额971亿 四年最高',
+ 'url': 'http://www.citreport.com/content/45595-1.html'}
+2019-02-21 21:26:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.citreport.com/data/attachment/portal/201902/20/175045n047lss57m7zlj4p.jpg.thumb.jpg> (referer: None)
+2019-02-21 21:26:06 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET http://www.citreport.com/data/attachment/portal/201902/20/175045n047lss57m7zlj4p.jpg.thumb.jpg> referred in <None>
+2019-02-21 21:26:06 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.citreport.com/content/45621-1.html>
+{'content2': '\r\n'
+             '               2019-2-21 13:43\r\n'
+             '作者: \r\n'
+             '\r\n'
+             '评论:\r\n'
+             '\r\n'
+             '\r\n'
+             '来源: 雷科技谁也不曾想到，发布会首个现身的产品，正是重头戏折叠屏手机Galaxy '
+             'Fold。当然这也不奇怪，三星在去年的SDC上就展出了Galaxy '
+             'Fold的工程机版本，这说明早在2018年底三星就已经拥有了成熟的折叠屏生产技术，因此Galaxy '
+             'Fold的出现是在意料之内。至于机身尺寸方面，Galaxy '
+             'Fold在折叠状态下屏幕尺寸为4.6英寸，而打开状态下屏幕尺寸会达到7.3英寸。这样的设计方案表明了Galaxy '
+             'Fold的设计理念：难得Galaxy Fold拥有如此大尺寸的屏幕，因此三星一再在发布会中强调Galaxy '
+             'Fold使用Office套件、观看Youtube视频和使用分屏多任务功能的便利性，简单说这款手机就是通过折叠的形态让消费者可以把7.3英寸的平板电脑握在手中。在发布会现场也展出了Galaxy '
+             'Fold的真机，从演示中我们可以看到，至于具体设计上，三星Galaxy '
+             'Fold其实是前后正反共六个摄像头，而且正面屏幕屏占比较低，但展开后的屏占比还是很可以的。同时手机边框貌似是金属材质，除了机身较厚（折叠状态达17mm）之外，基本找不到太大缺点。配置上Galaxy '
+             'Fold也并没有令人失望，不过略微遗憾的是，Galaxy '
+             'Fold并不支持最新的超声波屏幕指纹技术，这款设备上的安全加密方案是侧边指纹。后置三枚相机的信息我们也已经找到，Galaxy '
+             'Fold后置三枚相机分别是16MP超广角、12MP标准广角和12MP长焦，小屏幕上的前置相机是10MP规格，打开状态下那一组前置双摄规格分别是10MP的超广角和8MP的景深摄像头。三星表示，在Galaxy '
+             'S10+发布会上三星表示该手机已经加入了全新的AI系统，看来Galaxy '
+             'Fold也会拥有这些功能。直观来说这样的售价确实是非常高，但考虑到Galaxy '
+             'Fold拥有如此精妙的设计和强悍的配置，这个价格其实还算是可以。此外，此前的消息显示Galaxy '
+             'Fold只有100万台备货，所以不是你买不买得起的问题，而是你需要考虑能不能顺利买到。众所周知，iPhone为近十年的智能手机给出了准确定义，无论是三星还是其他手机厂商，所推出的智能手机基本都是以第一代iPhone作为蓝本，这说明智能手机在大方向上的发展是停滞了很长一段时间。正因为这种交互方式的固化，也使得智能手机的外观形态难以出现根本性改变。只是折叠屏技术的发展实在是太一波三折了，经历了多次跳票之后，我们也没有信心说折叠屏手机能够真正来到消费市场之中。但如今这一个“梦”终于实现，折叠屏手机Galaxy '
+             'Fold终于突破重重迷雾，来到了消费者面前。而那些抢先发布的但完成度不高的产品，最多只能叫试验品。而三星作为掌握屏幕面板核心技术的关键产品，旗下折叠屏手机的顺利登场相信也给业界注入了无限信心，在即将到来的MWC '
+             '2019中我们还可能有机会会见到更多的折叠屏设备，甚至行业的未来都有折叠屏设备的一席之地，而这个潮流的开创者，正是Galaxy '
+             'Fold。在这里我们可以大声宣布，折叠屏手机的历史正式开启。在数年后智能手机的形态变态万千之时，我们不要忘记是Galaxy '
+             'Fold在今天开创了这一历史。即使不扯那么远，Galaxy '
+             'Fold近乎完美的折叠设计也足够抢眼，至少让你成为“街上最靓的仔”是毫无压力。如果资金允许，那么还有什么理由不买呢？网站导航\r\n'
+             ' \r\n'
+             '\r\n'
+             '\r\n'
+             '\r\n'
+             '            \r\n'
+             '                 \r\n'
+             '                \r\n'
+             '            ',
+ 'image_urls': ['http://www.citreport.com/data/attachment/portal/201902/20/175045n047lss57m7zlj4p.jpg.thumb.jpg'],
+ 'images': [{'checksum': 'c7add2bc68c37311c92d9328302e2cc4',
+             'path': 'full/2a0734fbee3806be3ad4ec7df05830c85464d2af.jpg',
+             'url': 'http://www.citreport.com/data/attachment/portal/201902/20/175045n047lss57m7zlj4p.jpg.thumb.jpg'}],
+ 'title': '折叠屏手机Galaxy Fold登场！售价1万3却很有性价比',
+ 'url': 'http://www.citreport.com/content/45621-1.html'}
+2019-02-21 21:26:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.citreport.com/data/attachment/portal/201902/20/205042c4j7wkie2xpkeqqi.jpg.thumb.jpg> (referer: None)
+2019-02-21 21:26:06 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET http://www.citreport.com/data/attachment/portal/201902/20/205042c4j7wkie2xpkeqqi.jpg.thumb.jpg> referred in <None>
+2019-02-21 21:26:06 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.citreport.com/content/45626-1.html>
+{'content2': '\r\n'
+             '               2019-2-21 14:20\r\n'
+             '作者: \r\n'
+             '\r\n'
+             '评论:\r\n'
+             '\r\n'
+             '\r\n'
+             '来源: '
+             '网络俗话说得好“每逢佳节胖三斤”，相信许多小伙伴在刚过去的春节假期里都是大吃特吃，过完年之后，看着胖了不少的自己，估计都不敢上称了。而随着春节假期的结束，寒假也逐渐接近尾声，面对即将到来的开学季，我们应该怎样调节自己的习惯，让体重重回正常呢？这就是今天要跟大家分享的“卡路里识别”，健康开学，从卡路里识别开始。\xa0'
+             '过完节之所以会发胖，基本上都是因为摄入的卡路里过盛，“卡路里识别”就是能够快速识别食物的热量，这样就能够对自己摄入的卡路里有一个准确的认知。对于学生党而言，“卡路里识别”能够让你更好的管理自己每天的卡路里摄入量，从而让体重恢复到正常水准。\xa0'
+             '那么要想精准的进行“卡路里识别”，是否需要昂贵的专业仪器呢？当然不是，你只需要一台华为nova4就能够搞定。它自带卡路里识别功能，能够轻松获取食物的卡路里。\xa0'
+             '华为nova4搭载了内置NPU单元的麒麟970处理器，让其拥有了更为强大的AI计算能力，在它的智慧视觉中能够识超过600种食物的单位卡路里。使用方法也特别简单，在智慧视觉中点击“卡路里”，然后将摄像头对准需要进行识别的食物，这种食物所含的卡路里就会直接在屏幕中显示。整个的操作过程非常流畅，并且识别速度快、准确率高，可以说是目前最佳的“卡路里识别”方案。\xa0'
+             '除了能够进行卡路里识别，华为nova4还有许多亮点。它采用了极点全面屏的设计，视觉一体性更强，相比于刘海屏等设计更具有视觉冲击力。同时它还使用了后置三摄的组合，高配版搭载了4800万像素高清三摄让它拥有了极致的拍摄性能，其中还有一颗广角镜头，能够拍摄高达117°的超广角照片。加之3D曲面机身设计，配合上流光溢彩的配色，让颜值十分出众。对于学生党而言，它不仅是一个实用的工具，更是一款时尚单品。\xa0'
+             '网站导航\r\n'
+             ' \r\n'
+             '\r\n'
+             '\r\n'
+             '\r\n'
+             '            \r\n'
+             '                 \r\n'
+             '                \r\n'
+             '            ',
+ 'image_urls': ['http://www.citreport.com/data/attachment/portal/201902/20/205042c4j7wkie2xpkeqqi.jpg.thumb.jpg'],
+ 'images': [{'checksum': '481b039dfc57ebf3dc6991ec2e804b36',
+             'path': 'full/13c1ef19ed93e0262cd520780c600d395c26ff17.jpg',
+             'url': 'http://www.citreport.com/data/attachment/portal/201902/20/205042c4j7wkie2xpkeqqi.jpg.thumb.jpg'}],
+ 'title': '想健康瘦身的学生党看过来！手机也能识别卡路里你知道吗？',
+ 'url': 'http://www.citreport.com/content/45626-1.html'}
+2019-02-21 21:26:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.citreport.com/data/attachment/portal/201902/20/235043gpa9kbj4d8xx839j.jpg.thumb.jpg> (referer: None)
+2019-02-21 21:26:06 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET http://www.citreport.com/data/attachment/portal/201902/20/235043gpa9kbj4d8xx839j.jpg.thumb.jpg> referred in <None>
+2019-02-21 21:26:06 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.citreport.com/content/45629-1.html>
+{'content2': '\r\n'
+             '               2019-2-21 14:43\r\n'
+             '作者: \r\n'
+             '\r\n'
+             '评论:\r\n'
+             '\r\n'
+             '\r\n'
+             '来源: '
+             '科技快报网\u200b联想集团今天公布了截至2018年12月31日止第三季度业绩，营业额连续第六个季度实现年比年增长，达到971亿人民币，为4年来最高水平。所有主营业务的盈利能力均获提升，推动总体税前利润年比年提升133%，达到24.2亿人民币，创联想有史以来新高！由去年同期净亏损近20亿人民币大幅改善为净利润16亿人民币。Q3营业额为971亿人民币，年同比增长8.5%，连续第六个季度增长；达到24.2亿人民币，较去年同期提升133%，创联想历史新高；个人电脑及智能设备业务、移动业务和数据中心业务均实现增长；自收购摩托罗拉移动以来首次实现全球盈利；PC全球市场份额创历史新高达24.6%，稳居全球市场冠军，营业额年比年增长16%，跑赢大盘；数据中心业务营业额继续保持双位数高增长，连续第五个季度实现盈利水平改善。目前放眼全球，经济增长势头放缓，甚至出现了唱衰的声音，但回过头来反观中国经济现在处于何种阶段，或许从长远的周期来看最具意义。根据公布的数据，2018年的一至四季度，中国GDP增速分别为6.8%、6.7%、6.5%和6.4%，全年增速为6.6%，年度增速放缓；中国制造业PMI指标则连续多年徘徊在50荣枯线上方附近；而被戏称为A股的“暴雷”，表现则是1月31日的上百份预亏公告刷屏，亏损10亿成了“起步价”。不可否认的是，中国经济的增速确实在回落，但从长远来看，中国的城市化进程还远未结束、市场化改革还在继续，还在带动生产消费的扩张能力、改革开放后的劳动生产率还在提升等等，这些都可以更加确定中国的经济增长基础仍旧坚实。产业升级和智能化转型是如今被提及最多的两个词，对于中国来说，中国企业的企业升级和转型则尤其重要，关系到中国经济发展的方向和未来。无论哪一行业的领军企业，都会伴随着社会、经济、科技的发展面临着各种各样的挑战，因此，智能化转型成为了近年来决定企业发展的最关键因素。智能化转型不是单单的采用新技术、部署新技术，而是如何利用新技术来赋能自己、赋能客户、赋能产业，这才是真正的智能化转型。以联想为例，根据联想最近发布的财报显示，联想的业绩表现依旧强劲，已经实现了连续六个季度增长，智能设备、智能物联网、基础设施及行业生态系统等方面的技术和创新力在推动联想的智能变革和智能转型。从财报不难发现，联想的新增长引擎正式集中在推动产业升级和数字经济发展方面。在第三财季，联想数据中心业务营业额继续保持了双位数的高增长，年比年增速超过30%，连续第五个季度实现盈利水平的改善，主要得益于在超大规模数据中心和软件定义基础架构领域的强劲增长。目前联想在超大规模数据中心领域的绝大部分新项目都是自主设计和生产的，推动该业务年比年增速高达三位数。而在软件定义基础架构领域，年比年增长了近70%，同时继续稳居全球超级计算机排行榜的首位。联想集团董事长兼CEO杨元庆此前曾表示，驱动智能变革的数据、计算力和算法三个要素联合作用，正在形成一个全新的、能够改变世界的智能变革架构。基于之前的产业布局和积累，联想具备了智能化变革所需的各项要素，是极少数能够统一利用所有智能化要素资产的公司之一。其中，数据主要由智能物联网设备产生，计算力来自于高性能计算、云计算/边缘计算等技术的支撑，再加上基于机器学习、深度学习等算法的进步，让企业能够对各个行业快速学习和掌握，进而使企业的每一个价值链环节都变得越来越智能。联想的智能化变革新战略，即围绕智能物联网，智能基础架构，行业智能三个方向发展，使得联想在智能垂直行业解决方案方面已经拥有非常成功的尝试，并诞生了很多垂直行业的智能化案例。联想首先从自身的智能化变革开始，实现了从研究开发、供应链管理、生产制造、市场营销、售后服务等全价值链环节的智能化。在中国，联想则是智能转型的先锋，据了解在客服方面，联想在用聊天机器人回答50%以上的客户咨询；在制造企业们最为头疼的供应链环节，联想通过机器学习来提升需求预测的准确性，并在长期的需求预测方面获得比人工更高的准确率。除此之外，联想已经在运用业界领先的算法和大数据工具，针对智慧制造、智慧医疗、智慧零售等行业，构建整体的智能行业解决方案，助推各行各业的智能化。联想的智能化变革使联想成为了中国企业智能化转型中的赋能者，也是积极响应和推动“数字中国”落地的最佳合作伙伴。事实上，通过近几个季度业绩来看，联想通过全球化的布局确实一定程度上抵御了风险，不过度依赖单一市场提升了自身发展的稳定性，而在这种稳步发展的前提下，才能够实现逆势增长，布局新业务，推动新战略。网站导航\r\n'
+             ' \r\n'
+             '\r\n'
+             '\r\n'
+             '\r\n'
+             '            \r\n'
+             '                 \r\n'
+             '                \r\n'
+             '            ',
+ 'image_urls': ['http://www.citreport.com/data/attachment/portal/201902/20/235043gpa9kbj4d8xx839j.jpg.thumb.jpg'],
+ 'images': [{'checksum': 'c35883b7ee5ea0c11132ecab3241cc12',
+             'path': 'full/7affdfb32feab1d57f4e1e66731dd847dc51245c.jpg',
+             'url': 'http://www.citreport.com/data/attachment/portal/201902/20/235043gpa9kbj4d8xx839j.jpg.thumb.jpg'}],
+ 'title': '海外市场均衡布局有助于抵御寒冬，联想新财报成绩斐然',
+ 'url': 'http://www.citreport.com/content/45629-1.html'}
+2019-02-21 21:26:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.citreport.com/data/attachment/portal/201902/21/061738aoagzs5ngsyd5oso.jpg.thumb.jpg> (referer: None)
+2019-02-21 21:26:06 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET http://www.citreport.com/data/attachment/portal/201902/21/061738aoagzs5ngsyd5oso.jpg.thumb.jpg> referred in <None>
+2019-02-21 21:26:06 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.citreport.com/content/45637-1.html>
+{'content2': '\r\n'
+             '               2019-2-21 17:57\r\n'
+             '作者: \r\n'
+             '\r\n'
+             '评论:\r\n'
+             '\r\n'
+             '\r\n'
+             '来源: 雷科技2009年4月，。在这10年间，我们见证了三星取代诺基亚登顶全球手机之王，见证了Galaxy '
+             'S、Note产品线的诞生，也见证了一款款优秀的旗舰产品。2019年2月，。对于三星来说，其本身不仅颇具纪念意义，更是巩固三星全球高端市场地位的战略级产品。路三星S10系列。小到产品线的划分，大到产品本身，无处不体现它的与众不同。三星S10系列首次划分为三款产品，分别是，三者定位区隔明显。路Galaxy '
+             'S10e的产品思路比较特别。侧面指纹识别、后置双摄像头、5.8英寸FHD+级别Infinity-O直面屏，显示出它关于简配版旗舰的定义。而原本应该是小屏的Galaxy '
+             'S10，却将屏幕尺寸升级到了6.1英寸，更极致的S10+的屏幕则变成了6.4英寸。，主打超高色彩准确度、HDR10+等显示特性，带来全新的视觉效果。路Galaxy '
+             'S10系列的发布，也意味着。三星S10系列将前置摄像头升级到了1000万像素，S10+还额外提供一颗800万像素的景深辅助摄像头，用于自拍背景虚化。路后置摄像头方面，而S10e由于定位原因，取消了长焦镜头，但仍支持超广角。路三星S10系列还加强了智能性，个人觉得比较有看点的是两大功能。前者智能识别用户使用习惯，从而优化人机互动的方式；后者则通过机器学习分析大量的照片，来指导用户如何拍照。路三星Galaxy '
+             'S10和S10+均，目前市面上的屏幕指纹手机，大部分采用的是传统的光学方案。三星S10e、S10和S10+分别内置3100mAh、3400mAh和4100mAh电池，。三星并没有给出具体的输出规格，但提到了S10的无线充电速度比S9要快27-36%。路另外，三星S10系列还有一系列特性，等等。三星S10系列分为玻璃和陶瓷两种机身材质，其中。S10和S10+均提供白色、黑色、绿色和蓝色四大配色，S10+陶瓷版本有陶瓷黑和陶瓷白两种配色。其中，蓝色不在中国大陆市场销售。路S10e在以上四大配色的基础上，值得一提的是，S10e国行版本不提供蓝色和绿色。路三星Galaxy '
+             'S10系列全系搭载高通骁龙855或三星Exynos '
+             '9820芯片，提供的存储组合以及国行先行者计划价格如下：S10e：6GB+128GB（先行者售价5300元）、8GB+256GB（国行不提供）S10：8GB+128GB（先行者售价6300元）、8GB+512GB（先行者售价8000元）S10+：8GB+128GB（先行者售价7300元）、8+512GB（陶瓷版，先行者售价9000元）、12GB+512GB（陶瓷版，国行不提供）、12GB+1TB（陶瓷版，先行者售价12000元）以上价格为国行先行者计划售价，。因此，三星S10系列国行的具体价格还要等到中国发布会上才能揭晓。5G版S10的屏幕尺寸进一步扩大到了6.7英寸，电池变为4500mAh，支持25W快充，只提供8+256GB一个存储版本，并且不支持存储卡扩展。路该机采用前后ToF '
+             '3D镜头的配搭，前置用于3D人脸识别，后置新增的第四颗摄像头则用于增强AR体验。三星表示，5G版本S10支持28GHz和39GHz '
+             '5G网络，将联合美国运营商推出，价格目前尚未公布。路最后，小雷（微信：leitech）给大家画个重点，三星S10系列的亮点主要集中在：遗憾的地方目前看来，主要集中在：以上就是这次三星十周年旗舰新品Galaxy '
+             'S10系列，你觉得如何？网站导航\r\n'
+             ' \r\n'
+             '\r\n'
+             '\r\n'
+             '\r\n'
+             '            \r\n'
+             '                 \r\n'
+             '                \r\n'
+             '            ',
+ 'image_urls': ['http://www.citreport.com/data/attachment/portal/201902/21/061738aoagzs5ngsyd5oso.jpg.thumb.jpg'],
+ 'images': [{'checksum': '55eae735cf5760ef63224e9961812512',
+             'path': 'full/f9f9b0b1915376cec0aa3410d4d4693e84f7770d.jpg',
+             'url': 'http://www.citreport.com/data/attachment/portal/201902/21/061738aoagzs5ngsyd5oso.jpg.thumb.jpg'}],
+ 'title': '盖乐世系列10周年发布会，三星到底发了什么大招？',
+ 'url': 'http://www.citreport.com/content/45637-1.html'}
+2019-02-21 21:26:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.citreport.com/data/attachment/portal/201902/21/175732f98ldob7ndb1tnbz.jpg.thumb.jpg> (referer: None)
+2019-02-21 21:26:06 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET http://www.citreport.com/data/attachment/portal/201902/21/175732f98ldob7ndb1tnbz.jpg.thumb.jpg> referred in <None>
+2019-02-21 21:26:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.citreport.com/data/attachment/portal/201902/21/205737jcgkvvfsqhhs1kk5.jpg.thumb.jpg> (referer: None)
+2019-02-21 21:26:06 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET http://www.citreport.com/data/attachment/portal/201902/21/205737jcgkvvfsqhhs1kk5.jpg.thumb.jpg> referred in <None>
+2019-02-21 21:26:06 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.citreport.com/content/45638-1.html>
+{'content2': '\r\n'
+             '               2019-2-21 18:10\r\n'
+             '作者: \r\n'
+             '\r\n'
+             '评论:\r\n'
+             '\r\n'
+             '\r\n'
+             '来源: '
+             '互联网2月21日消息，据国外媒体报道，跨国电信运营商沃达丰近日已首次成功将5G智能手机接入网络，其网络速度是当前4G技术的10倍。沃达丰是在当地时间周三进行这一试验的，其成功将下一代5G智能手机接入了他们的网络，沃达丰表示他们在试验中进行了一次马德里与巴塞罗那之间的超高分辨率4K视频通话，网络速度是当前4G技术的10倍。沃达丰周三进行的这次5G手机接入网络试验，其实是在为推出商用5G服务做准备，其在周三就表示，他们准备今年晚些时候在欧洲的部分城市推出5G服务。5G是当前通讯行业的一大热点，电信设备厂商和电信运营商都在加速推进5G的商用，手机厂商也已开始推出5G手机，在今天凌晨于美国旧金山举行的新品发布会上，韩国手机厂商三星电子的5G手机就已经亮相。虽然全球范围内的5G服务预计会在2020年开始，但目前部分国家已推出或宣布准备推出小范围的5G服务，SK '
+             'Telecom、LG '
+             'Uplus和KT这三大韩国电信运营商，去年的12月1日就已推出了面向企业用户的5G商用服务，面向个人的预计会在今年3月份推出。网站导航\r\n'
+             ' \r\n'
+             '\r\n'
+             '\r\n'
+             '\r\n'
+             '            \r\n'
+             '                 \r\n'
+             '                \r\n'
+             '            ',
+ 'image_urls': ['http://www.citreport.com/data/attachment/portal/201902/21/175732f98ldob7ndb1tnbz.jpg.thumb.jpg'],
+ 'images': [{'checksum': '4b1ff7bbf92edf0a33ac37dc3259bbf6',
+             'path': 'full/6cb2e326cc36f05b83892b704694592449b032b2.jpg',
+             'url': 'http://www.citreport.com/data/attachment/portal/201902/21/175732f98ldob7ndb1tnbz.jpg.thumb.jpg'}],
+ 'title': '沃达丰首次成功将5G手机接入网络 速度是当前4G技术10倍',
+ 'url': 'http://www.citreport.com/content/45638-1.html'}
+2019-02-21 21:26:07 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.citreport.com/content/45649-1.html>
+{'content2': '\r\n'
+             '               2019-2-21 20:57\r\n'
+             '作者: \r\n'
+             '\r\n'
+             '评论:\r\n'
+             '\r\n'
+             '\r\n'
+             '来源: 雷科技北京时间2月21日凌晨3点,三星在美国旧金山举行Galaxy Unpacked '
+             '2019新品发布会，推出了Galaxy 10周年旗舰手机Galaxy '
+             'S10系列。下面和小雷一起先来看波图赏吧！路三星S10系列首次划分为三款产品，分别是入门旗舰Galaxy '
+             'S10e，均衡旗舰Galaxy S10和极致性能旗舰Galaxy S10+。路Galaxy '
+             'S10e采用5.8英寸FHD+级别Infinity-O直面屏。Galaxy '
+             'S10，屏幕尺寸6.1英寸，S10+的屏幕6.4英寸。全新的2K+级超感官全面屏，采用了业内首款Dynamic '
+             'AMOLED面板，主打超高色彩准确度、HDR10+等显示特性，带来全新的视觉效果。路在前置摄像头方面，三星S10系列将前置摄像头升级到了1000万像素，S10+还额外提供一颗800万像素的景深辅助摄像头，用于自拍背景虚化。路后置摄像头方面，三星S10系列则是在先前的1200万变焦双摄的基础上，新增了一颗1600万像素123°的超广角摄像头。而S10e则取消了长焦镜头，但仍支持超广角。路三星S10系列分为玻璃和陶瓷两种机身材质，其中陶瓷版本仅限S10+。S10和S10+均提供白色、黑色、绿色和蓝色四大配色，S10+陶瓷版本有陶瓷黑和陶瓷白两种配色。其中，蓝色不在中国大陆市场销售。路S10e在以上四大配色的基础上，额外提供一款新配色沁柠黄，色彩鲜艳亮丽。不过，S10e国行版本不提供蓝色和绿色。路价格方面（以下价格为国行先行者计划售价，具体价格还要等到中国发布会上才能揭晓。）。S10e：6GB+128GB（先行者售价5300元）、8GB+256GB（国行不提供）S10：8GB+128GB（先行者售价6300元）、8GB+512GB（先行者售价8000元）S10+：8GB+128GB（先行者售价7300元）、8+512GB（陶瓷版，先行者售价9000元）、12GB+512GB（陶瓷版，国行不提供）、12TB+1TB（陶瓷版，先行者售价12000元）在这次的发布会上还有一个“One '
+             'More Thing”，就是Galaxy S10 '
+             '5G版本。5G版S10的屏幕尺寸进一步扩大到了5.7英寸，电池变为4500mAh，支持25W快充，只提供8+256GB一个存储版本，并且不支持存储卡扩展。价格目前尚未公布。本次发布会还有一个重头戏，那就是折叠屏手机Galaxy '
+             'Fold。Galaxy '
+             'Fold在折叠状态下屏幕尺寸为4.6英寸，而打开状态下屏幕尺寸会达到7.3英寸。配色也增多至4款。Galaxy '
+             'Fold采用安全加密方案是侧边指纹，后置三枚相机分别是16MP超广角、12MP标准广角和12MP长焦，小屏幕上的前置相机是10MP规格，打开状态下那一组前置双摄规格分别是10MP的超广角和8MP的景深摄像头。路一看价格，小雷知道是买不起系列。官宣售价为1980美元（约合人民币13300元），分别为4G '
+             'LTE和5G两个版本，4月26日开售。路图赏看完了，感兴趣的小伙伴就可以翻翻自己的钱包了，听小雷一句劝，该出手时就出手，喜欢就赶紧买吧！路网站导航\r\n'
+             ' \r\n'
+             '\r\n'
+             '\r\n'
+             '\r\n'
+             '            \r\n'
+             '                 \r\n'
+             '                \r\n'
+             '            ',
+ 'image_urls': ['http://www.citreport.com/data/attachment/portal/201902/21/205737jcgkvvfsqhhs1kk5.jpg.thumb.jpg'],
+ 'images': [{'checksum': 'bf442b2d315c51e8474b9e25879b7d8f',
+             'path': 'full/f98dfd5b41bd372005876a7ab42f3409ecd575a4.jpg',
+             'url': 'http://www.citreport.com/data/attachment/portal/201902/21/205737jcgkvvfsqhhs1kk5.jpg.thumb.jpg'}],
+ 'title': '三星S10、折叠屏手机图赏：炫酷黑科技，这谁顶得住啊？',
+ 'url': 'http://www.citreport.com/content/45649-1.html'}
+2019-02-21 21:26:07 [scrapy.core.engine] INFO: Closing spider (finished)
+2019-02-21 21:26:07 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 7347,
+ 'downloader/request_count': 15,
+ 'downloader/request_method_count/GET': 15,
+ 'downloader/response_bytes': 200525,
+ 'downloader/response_count': 15,
+ 'downloader/response_status_count/200': 15,
+ 'file_count': 7,
+ 'file_status_count/downloaded': 7,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2019, 2, 21, 13, 26, 7, 63608),
+ 'item_scraped_count': 7,
+ 'log_count/DEBUG': 30,
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 7,
+ 'request_depth_max': 1,
+ 'response_received_count': 15,
+ 'scheduler/dequeued': 8,
+ 'scheduler/dequeued/memory': 8,
+ 'scheduler/enqueued': 8,
+ 'scheduler/enqueued/memory': 8,
+ 'spider_exceptions/IndexError': 1,
+ 'start_time': datetime.datetime(2019, 2, 21, 13, 26, 5, 83415)}
+2019-02-21 21:26:07 [scrapy.core.engine] INFO: Spider closed (finished)
+2019-02-22 19:22:34 [scrapy.utils.log] INFO: Scrapy 1.6.0 started (bot: ITCOM)
+2019-02-22 19:22:34 [scrapy.utils.log] INFO: Versions: lxml 4.3.0.0, libxml2 2.9.5, cssselect 1.0.3, parsel 1.5.1, w3lib 1.20.0, Twisted 18.9.0, Python 3.7.0 (v3.7.0:1bf9cc5093, Jun 27 2018, 04:59:51) [MSC v.1914 64 bit (AMD64)], pyOpenSSL 19.0.0 (OpenSSL 1.1.1a  20 Nov 2018), cryptography 2.5, Platform Windows-10-10.0.17134-SP0
+2019-02-22 19:22:34 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'ITCOM', 'CONCURRENT_REQUESTS': 32, 'DOWNLOAD_DELAY': 0.1, 'FEED_EXPORT_ENCODING': 'utf-8', 'LOG_FILE': './test.log', 'NEWSPIDER_MODULE': 'ITCOM.spiders', 'SPIDER_MODULES': ['ITCOM.spiders'], 'USER_AGENT': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36'}
+2019-02-22 19:22:34 [scrapy.extensions.telnet] INFO: Telnet Password: 863d991181db4a96
+2019-02-22 19:22:34 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2019-02-22 19:22:34 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2019-02-22 19:22:34 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2019-02-22 19:22:34 [scrapy.middleware] INFO: Enabled item pipelines:
+['scrapy.pipelines.images.ImagesPipeline', 'ITCOM.pipelines.ItcomPipeline']
+2019-02-22 19:22:34 [scrapy.core.engine] INFO: Spider opened
+2019-02-22 19:22:34 [scrapy.core.engine] INFO: Closing spider (shutdown)
+2019-02-22 19:22:34 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'finish_reason': 'shutdown',
+ 'finish_time': datetime.datetime(2019, 2, 22, 11, 22, 34, 929020),
+ 'log_count/INFO': 7}
+2019-02-22 19:22:34 [scrapy.core.engine] INFO: Spider closed (shutdown)
+2019-02-22 19:22:35 [twisted] CRITICAL: Unhandled error in Deferred:
+2019-02-22 19:22:35 [twisted] CRITICAL: 
+Traceback (most recent call last):
+  File "c:\users\向寒°\appdata\local\programs\python\python37\lib\site-packages\twisted\internet\defer.py", line 1418, in _inlineCallbacks
+    result = g.send(result)
+  File "c:\users\向寒°\appdata\local\programs\python\python37\lib\site-packages\scrapy\crawler.py", line 82, in crawl
+    yield self.engine.open_spider(self.spider, start_requests)
+pymongo.errors.OperationFailure: Authentication failed.
+2019-02-22 19:23:25 [scrapy.utils.log] INFO: Scrapy 1.6.0 started (bot: ITCOM)
+2019-02-22 19:23:25 [scrapy.utils.log] INFO: Versions: lxml 4.3.0.0, libxml2 2.9.5, cssselect 1.0.3, parsel 1.5.1, w3lib 1.20.0, Twisted 18.9.0, Python 3.7.0 (v3.7.0:1bf9cc5093, Jun 27 2018, 04:59:51) [MSC v.1914 64 bit (AMD64)], pyOpenSSL 19.0.0 (OpenSSL 1.1.1a  20 Nov 2018), cryptography 2.5, Platform Windows-10-10.0.17134-SP0
+2019-02-22 19:23:25 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'ITCOM', 'CONCURRENT_REQUESTS': 32, 'DOWNLOAD_DELAY': 0.1, 'FEED_EXPORT_ENCODING': 'utf-8', 'LOG_FILE': './test.log', 'NEWSPIDER_MODULE': 'ITCOM.spiders', 'SPIDER_MODULES': ['ITCOM.spiders'], 'USER_AGENT': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36'}
+2019-02-22 19:23:25 [scrapy.extensions.telnet] INFO: Telnet Password: 9cc09fb4b245f19f
+2019-02-22 19:23:25 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2019-02-22 19:23:25 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2019-02-22 19:23:25 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2019-02-22 19:23:25 [scrapy.middleware] INFO: Enabled item pipelines:
+['scrapy.pipelines.images.ImagesPipeline', 'ITCOM.pipelines.ItcomPipeline']
+2019-02-22 19:23:25 [scrapy.core.engine] INFO: Spider opened
+2019-02-22 19:23:25 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-02-22 19:23:25 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2019-02-22 19:23:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.citreport.com/news/it/> (referer: None)
+2019-02-22 19:23:26 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.citreport.com/news/it/> (referer: None)
+Traceback (most recent call last):
+  File "c:\users\向寒°\appdata\local\programs\python\python37\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "c:\users\向寒°\appdata\local\programs\python\python37\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "c:\users\向寒°\appdata\local\programs\python\python37\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "c:\users\向寒°\appdata\local\programs\python\python37\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "c:\users\向寒°\appdata\local\programs\python\python37\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "C:\Users\向寒°\four\_scrapy\ITCOM\ITCOM\spiders\ITcom.py", line 24, in parse
+    item['image_urls'] = [images[index]]  #图片链接
+IndexError: list index out of range
+2019-02-22 19:23:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.citreport.com/content/45672-1.html> (referer: http://www.citreport.com/news/it/)
+2019-02-22 19:23:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.citreport.com/content/45715-1.html> (referer: http://www.citreport.com/news/it/)
+2019-02-22 19:23:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.citreport.com/content/45695-1.html> (referer: http://www.citreport.com/news/it/)
+2019-02-22 19:23:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.citreport.com/content/45724-1.html> (referer: http://www.citreport.com/news/it/)
+2019-02-22 19:23:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.citreport.com/content/45720-1.html> (referer: http://www.citreport.com/news/it/)
+2019-02-22 19:23:27 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.citreport.com/content/45665-1.html> (referer: http://www.citreport.com/news/it/)
+2019-02-22 19:23:27 [scrapy.pipelines.files] DEBUG: File (uptodate): Downloaded image from <GET http://www.citreport.com/data/attachment/portal/201902/21/175732f98ldob7ndb1tnbz.jpg.thumb.jpg> referred in <None>
+2019-02-22 19:23:27 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.citreport.com/content/45665-1.html>
+{'content2': '\r\n'
+             '               2019-2-22 05:58\r\n'
+             '作者: \r\n'
+             '\r\n'
+             '评论:\r\n'
+             '\r\n'
+             '\r\n'
+             '来源: 雷科技北京时间2月21日凌晨3点，三星在美国旧金山推出了Galaxy 10周年旗舰手机Galaxy '
+             'S10系列。除了S10，还带来了折叠屏手机Galaxy '
+             'Fold。S10在发布前就已经备受关注，发布会的关注度自然不会低，发布会刚结束，吃瓜群众们就开始段子满天飞了。让我们一起来看看网友们是怎么评论这场三星发布会的吧！注：以下评论段子皆来自于伟大的网友。@任帝运三星Galaxy '
+             'Fold：你大爷还是你大爷\xa0@DoctorMeng高东真：“请大家系好安全带，我们要开始加速了”(三星牛逼路\xa0'
+             '）路@Jevon-H三星：反正 S10 系列被脱得底裤都不剩了，那就直接先来 Galaxy Fold 吧路\xa0'
+             '@雷军加个硬广~路@Jason玺\xa0三星依然是全球手机厂商最强发布会舞美效果路@Jason玺\xa0'
+             '把三星S10和华为Mate20背部贴到一起，到底是谁给谁充电？路@三司绫濑的月匈垫\xa0'
+             '这三星发布会看得我好爽怎么回事明明我没有钱@阿筱_今天脱非了吗\xa0#三星S10#\xa0非三星用户不配拥有姓名吗路\xa0'
+             '路@人生需要YY#三星s10##折叠屏手机#\xa0'
+             '请各个数码博主不要问你会买吗，问你买得起吗就好路再次说明，所有段子和评论都来自网友们，请理性对待，购机还是以自身需求为准哦，如果你还有其他的吐槽或段子，欢迎各位小伙伴在下方留言哦~网站导航\r\n'
+             ' \r\n'
+             '\r\n'
+             '\r\n'
+             '\r\n'
+             '            \r\n'
+             '                 \r\n'
+             '                \r\n'
+             '            ',
+ 'image_urls': ['http://www.citreport.com/data/attachment/portal/201902/21/175732f98ldob7ndb1tnbz.jpg.thumb.jpg'],
+ 'images': [{'checksum': '4b1ff7bbf92edf0a33ac37dc3259bbf6',
+             'path': 'full/6cb2e326cc36f05b83892b704694592449b032b2.jpg',
+             'url': 'http://www.citreport.com/data/attachment/portal/201902/21/175732f98ldob7ndb1tnbz.jpg.thumb.jpg'}],
+ 'title': '三星S10发布会段子来袭！网友：你大爷还是你大爷',
+ 'url': 'http://www.citreport.com/content/45665-1.html'}
+2019-02-22 19:23:27 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.citreport.com/content/45668-1.html> (referer: http://www.citreport.com/news/it/)
+2019-02-22 19:23:27 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.citreport.com/content/45671-1.html> (referer: http://www.citreport.com/news/it/)
+2019-02-22 19:23:27 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.citreport.com/data/attachment/portal/201902/22/055825ahbmsrrvxqrmqybm.png.thumb.jpg> (referer: None)
+2019-02-22 19:23:27 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET http://www.citreport.com/data/attachment/portal/201902/22/055825ahbmsrrvxqrmqybm.png.thumb.jpg> referred in <None>
+2019-02-22 19:23:27 [PIL.PngImagePlugin] DEBUG: STREAM b'IHDR' 16 13
+2019-02-22 19:23:27 [PIL.PngImagePlugin] DEBUG: STREAM b'IDAT' 41 2800
+2019-02-22 19:23:27 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.citreport.com/content/45673-1.html> (referer: http://www.citreport.com/news/it/)
+2019-02-22 19:23:27 [scrapy.pipelines.files] DEBUG: File (uptodate): Downloaded image from <GET http://www.citreport.com/data/attachment/portal/201902/21/205737jcgkvvfsqhhs1kk5.jpg.thumb.jpg> referred in <None>
+2019-02-22 19:23:27 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.citreport.com/content/45672-1.html>
+{'content2': '\r\n'
+             '               2019-2-22 09:25\r\n'
+             '作者: \r\n'
+             '\r\n'
+             '评论:\r\n'
+             '\r\n'
+             '\r\n'
+             '来源: '
+             '互联网从极光大数据(纳斯达克股票代码:JG)近日发布的《2018年度移动互联网行业数据研究报告》看来,移动互联网行业在用户规模和使用时长上的红利似乎已趋饱和,移动网民人均安装应用数量增长放缓,用户整体对于三线及以下城市的下沉也不如许多人想象般显著。下面我们将结合具体数据,来看看移动互联网行业在2018年度表现出来的一些趋势。过去一年,国内手机终端数量的上升幅度非常有限。在18年8月上升至11.32亿台后,国内的手机终端数量趋于平稳。与17年同期相比,18年12月的活跃手机终端数量仅增长1千万台,意味着国内手机设备的增长红利已经淡出。尽管在过去一年,“用户下沉”已经成为不少移动应用的经营策略,但从极光大数据的统计结果看来,移动网民整体向三线及以下城市的下沉趋势并不明显。从17年Q4至18年Q3,一线、新一线和二线城市在移动网民中的占比持续攀升,该趋势在18年Q4有所放缓。截至2018年Q4,分布在二线及以上城市的移动网民合共占比46.7%,较17年Q4增长4.6%根据极光大数据的统计结果,截至18年Q4,平均每台移动设备上安装有51款应用。尽管与17年Q4相比实现较大增幅,但从整体走势看来,每台移动设备的应用安装数量在增速上有所放缓。在18年Q4,国内每台移动设备平均每月新装应用数量为3款,卸载数量为2.6款。在18年Q4,国内移动网民人均每天在应用上花费4.2小时,与过去2个季度持平。由于移动网民的日均应用使用时长已趋于稳定,不同类别应用的时长占比自然会表现出相互蚕食的趋势。尽管在所有应用类别中,社交网络应用的每用户日均使用时长占比依然稳居第一位,但所占比例却表现出逐步下降的趋势。截至18年Q4,社交网络类应用的使用时长占比为32.8%,与Q1相比下降3.5%。值得注意的是,用户消耗在视频直播应用上的时长攀升趋势非常显著。截至18年Q4,视频直播类应用的使用时长占比达到27.3%,仅次于社交网络应用,与Q1相比上升3.3%。过去一年,新闻资讯应用在用户日均时长占比上的增长也较为明显。截至18年Q4,新闻资讯应用的使用时长占比为9.5%,较Q1增长2%。与18年Q1相比,用户在Q4人均每天花费在手机游戏上的时长占比下降了1.8%。网站导航\r\n'
+             ' \r\n'
+             '\r\n'
+             '\r\n'
+             '\r\n'
+             '            \r\n'
+             '                 \r\n'
+             '                \r\n'
+             '            ',
+ 'image_urls': ['http://www.citreport.com/data/attachment/portal/201902/22/055825ahbmsrrvxqrmqybm.png.thumb.jpg'],
+ 'images': [{'checksum': 'f1687aef0b650757997d1989682f7b1a',
+             'path': 'full/4beebc3b6da235cbadca12d82a6fc4d3b2cb54dd.jpg',
+             'url': 'http://www.citreport.com/data/attachment/portal/201902/22/055825ahbmsrrvxqrmqybm.png.thumb.jpg'}],
+ 'title': '极光大数据：视频和新闻APP抢占时长，社交、手游遭蚕食',
+ 'url': 'http://www.citreport.com/content/45672-1.html'}
+2019-02-22 19:23:27 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.citreport.com/content/45668-1.html>
+{'content2': '\r\n'
+             '               2019-2-22 09:01\r\n'
+             '作者: \r\n'
+             '\r\n'
+             '评论:\r\n'
+             '\r\n'
+             '\r\n'
+             '来源: '
+             '雷科技春节档上映的电影中，《流浪地球》无疑是最成功的一部。根据最新的数据统计，这部电影的票房已经超过了40亿元，成为大陆地区有史以来票房第二高的电影，仅次于《战狼2》。路今天，阿里旗下的视频平台。当然，目前这部电影还没有下映，想要在网络平台上看到它，估计还要再等等。此外，考虑到版权费用，在优酷上观看《流浪地球》的话，估计还要开通会员或支付一定的费用。另外，，使用范围为全球中国大陆之外的地区。据悉，这部电影将被翻译成28种文字，在世界其他地区播放。此外，《流浪地球》也已经在北美上映，票房成绩虽然不如国内，但作为华语电影，在当地的表现已经非常不错了。路Netflix目前尚未在大陆地区上线服务，但在海外市场上，它具有举足轻重的地位。Netflix以光盘租赁起家，后来成功转型流媒体服务。此外，Netflix也推出过很多知名影视内容，例如前几年在国内也很火的《纸牌屋》就出自它之手。路《流浪地球》可以说是近年来最成功的的国产科幻电影，它的原著小说来自刘慈欣。相比《三体》三部曲的长篇巨著，《流浪地球》是一部故事情节相对比较简单的中篇小说，电影中也做了比较大的改编。但它延续了大刘科幻小说的一贯特点，注重想象力和点子。当然，前一阵子，这部电影因为在豆瓣上的评分风波，引起了应用市场一星评价豆瓣事件，在网络上引起了一阵喧嚣，《流浪地球》也变得更加有话题性。如今，在国内市场上，电影版权也越发规范化。各大视频平台巨头对热门影视内容都在竞相追逐。优酷此次拿下了《流浪地球》的网络播放权，在会员服务和平台上，自然也就有了优势和宣传卖点，或许还能借机吸引更多的用户加入其中。网站导航\r\n'
+             ' \r\n'
+             '\r\n'
+             '\r\n'
+             '\r\n'
+             '            \r\n'
+             '                 \r\n'
+             '                \r\n'
+             '            ',
+ 'image_urls': ['http://www.citreport.com/data/attachment/portal/201902/21/205737jcgkvvfsqhhs1kk5.jpg.thumb.jpg'],
+ 'images': [{'checksum': 'bf442b2d315c51e8474b9e25879b7d8f',
+             'path': 'full/f98dfd5b41bd372005876a7ab42f3409ecd575a4.jpg',
+             'url': 'http://www.citreport.com/data/attachment/portal/201902/21/205737jcgkvvfsqhhs1kk5.jpg.thumb.jpg'}],
+ 'title': '《流浪地球》上演国产电影奇迹！网飞抢下全球网络独播权',
+ 'url': 'http://www.citreport.com/content/45668-1.html'}
+2019-02-22 19:23:27 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.citreport.com/data/attachment/portal/201902/22/115914vx7g4gbqbz01nq10.jpg.thumb.jpg> (referer: None)
+2019-02-22 19:23:27 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET http://www.citreport.com/data/attachment/portal/201902/22/115914vx7g4gbqbz01nq10.jpg.thumb.jpg> referred in <None>
+2019-02-22 19:23:27 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.citreport.com/data/attachment/portal/201902/22/090126ux6qrzzoaedrxr0d.jpeg.thumb.jpg> (referer: None)
+2019-02-22 19:23:27 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET http://www.citreport.com/data/attachment/portal/201902/22/090126ux6qrzzoaedrxr0d.jpeg.thumb.jpg> referred in <None>
+2019-02-22 19:23:27 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.citreport.com/content/45715-1.html>
+{'content2': '\r\n'
+             '               2019-2-22 11:59\r\n'
+             '作者: \r\n'
+             '\r\n'
+             '评论:\r\n'
+             '\r\n'
+             '\r\n'
+             '来源: 雷科技日前，JEDEC固态技术协会发布了LPDDR5运行内存标准。类似于UFS '
+             '3.0闪存，LPDDR5是目前在RAM上最新的标准。其支持以每秒6400MT的I/O速率，相比LPDDR4第一版提升了50%。另外，LPDDR5还增加了降低功耗功能，调整了核心和I/O的动态频率和电压等多个全新特性。LPDDR5适用于智能手机、平板电脑、超极本等多种品类的移动计算需求，甚至它还提供了为汽车等关键应用而设计的功能。与先前版本的标准相比，LPDDR5的内存吞吐量翻了一番。其标准的数据速率为每秒6400MT，而LPDDR4在2014年发布时的速率为每秒3200MT，LPDDR5有望对下一代便携式电子设备的性能和功能产生巨大影响。为了实现这种性能提升，LPDDR5架构进行了重新设计，最高支持16 '
+             'Banks架构和多时钟架构。路LPDDR5通过引入两个基于Data-Copy和Write-X命令的操作，减少数据传输来降低系统整体功耗。 '
+             '为满足汽车以及相关市场对数据可靠性的需求，LPDDR5在SoC和DRAM之间的接口上引入了链路纠错码（ECC）的支持。整体来看，LPDDR5相比上代的LPDDR4来说，最大的优势在于速率的提升以及功耗的降低，这意味着该LPDDR5的运行内存理论上会更加省电，数据传输速度也会更快。去年7月，三星发布了全球首款10nm '
+             '8Gb '
+             'LPDDR5内存。按照三星官方的说法，在1.1伏的工作电压下，LPDDR5内存的速度为6400MB/s，相比LPDDR4X提升了50%；在1.05伏的工作电压下，LPDDR5内存的速度为5500MB/s。在刚刚发布的三星Galaxy '
+             'Fold折叠屏手机中，该公司就用上了UFS '
+             '3.0闪存，不过因为成本过高，售价1.3万元的旗舰机也才只用上了512GB。这样看来，UFS '
+             '3.0闪存和LPDDR5运存将很有可能在2019年被更多厂商采用，待未来两年成本降下来后，会像UFS '
+             '2.1和LPDDR4一样得到进一步的普及。网站导航\r\n'
+             ' \r\n'
+             '\r\n'
+             '\r\n'
+             '\r\n'
+             '            \r\n'
+             '                 \r\n'
+             '                \r\n'
+             '            ',
+ 'image_urls': ['http://www.citreport.com/data/attachment/portal/201902/22/115914vx7g4gbqbz01nq10.jpg.thumb.jpg'],
+ 'images': [{'checksum': 'eae6e4323f9d832c87183f4ba247108f',
+             'path': 'full/d42497d382bef51f4c22641dcbd4cb00fe281c9f.jpg',
+             'url': 'http://www.citreport.com/data/attachment/portal/201902/22/115914vx7g4gbqbz01nq10.jpg.thumb.jpg'}],
+ 'title': 'LPDDR5内存标准发布，相比LPDDR4提升50%！',
+ 'url': 'http://www.citreport.com/content/45715-1.html'}
+2019-02-22 19:23:27 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.citreport.com/content/45695-1.html>
+{'content2': '\r\n'
+             '               2019-2-22 09:51\r\n'
+             '作者: \r\n'
+             '\r\n'
+             '评论:\r\n'
+             '\r\n'
+             '\r\n'
+             '来源: '
+             '厂商2018年3月28日，今日头条上线了一只“灵犬”，这是国内首款反低俗小程序。如今“灵犬”经过近一年的发展，进行了全面升级。除了反色情低俗，还加入了反暴力谩骂和反标题党能力。至此，“灵犬”的检测服务，已经覆盖了主要的低俗低质内容类型。“灵犬”最初的版本是今日头条基于反低俗模型开发。用户打开“灵犬”后，输入一段文字或文章链接，就能检测其内容质量指数，并得到鉴定结果，包括：是否可以获得算法推荐，是否需要引入人工判断等。而升级之后的“灵犬”\xa0 '
+             '，打击低俗低质的能力大大提升了。 '
+             '反色情低俗、反暴力谩骂模型，整体识别准确率约为85%，反标题党模型识别准确率约为90%。这些技术模型每天仍在持续优化迭代。不同于一般平台对于低俗低质内容通常采取人工投诉、事后删除的办法，“灵犬”作为技术手段，将有效帮助平台将内容质量检测的机制前置，辅助创作者自查内容是否触发色情低俗、暴力谩骂和标题党等因素。与此同时，今日头条投入了上万人专业审核编辑团队，致力于结合人工、技术手段，保障平台内容健康。数据显示，截至目前，“灵犬”使用人次已经突破240万。随着“灵犬”开放给社会公众，后续今日头条还将对外开放更多技术模型，包括辟谣模型、打击标题党模型等，行业的平台生态标准将会得到有效改善。网站导航\r\n'
+             ' \r\n'
+             '\r\n'
+             '\r\n'
+             '\r\n'
+             '            \r\n'
+             '                 \r\n'
+             '                \r\n'
+             '            ',
+ 'image_urls': ['http://www.citreport.com/data/attachment/portal/201902/22/090126ux6qrzzoaedrxr0d.jpeg.thumb.jpg'],
+ 'images': [{'checksum': 'db8ee2680c7bbd4811ee94159f11c570',
+             'path': 'full/10eb16244f613a1ee1ff851ef0875ad95f125aab.jpg',
+             'url': 'http://www.citreport.com/data/attachment/portal/201902/22/090126ux6qrzzoaedrxr0d.jpeg.thumb.jpg'}],
+ 'title': '国内首款反低俗软件“灵犬”上线快一年了，发展现状如何？',
+ 'url': 'http://www.citreport.com/content/45695-1.html'}
+2019-02-22 19:23:27 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.citreport.com/data/attachment/portal/201902/22/175938oez8czqtz4nplzqd.jpg.thumb.jpg> (referer: None)
+2019-02-22 19:23:27 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET http://www.citreport.com/data/attachment/portal/201902/22/175938oez8czqtz4nplzqd.jpg.thumb.jpg> referred in <None>
+2019-02-22 19:23:28 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.citreport.com/data/attachment/portal/201902/22/145921ocozj2336secnrpt.jpg.thumb.jpg> (referer: None)
+2019-02-22 19:23:28 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET http://www.citreport.com/data/attachment/portal/201902/22/145921ocozj2336secnrpt.jpg.thumb.jpg> referred in <None>
+2019-02-22 19:23:28 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.citreport.com/content/45724-1.html>
+{'content2': '\r\n'
+             '               2019-2-22 17:59\r\n'
+             '作者: \r\n'
+             '\r\n'
+             '评论:\r\n'
+             '\r\n'
+             '\r\n'
+             '来源: '
+             '雷科技在PC版上市四年之后，《仙剑奇侠传6》终于登陆PS4平台，下载版定价26.99美元/211港币（约合人民币182元），内置简繁中文和英文字幕，含特典内容的实体限量版限量2000套。PS4版本《仙剑奇侠传6》由海外发行商Eastasiasoft发行，会从2019年4月3日开始在亚洲区域的PS4版PlayStation '
+             'Store上销售，各区定价都相当于人民币180元左右。实体版价格尚不得知，似乎将只有限量版一个版本，限量版在游戏本体和包装外包含了手册、音乐光碟和收藏证书。路《仙剑奇侠传6》最初在2015年7月8日发售，讲述了与整个系列一脉相承的仙侠冒险故事，由于游戏优化糟糕而且画面表现落后于时代，在玩家群体中没有获得较好的口碑。PS4版游戏在PC原版基础上加入了手柄操作的界面，并继承了游戏发售后的6个DLC，不知性能问题是不是已经得到了解决。路早在2015年时，《仙剑奇侠传6》就宣布要登陆PS4，但在2015年ChinaJoy展会之后不再见到后续进展，这次正式公布PS4版发售消息，也算是兑现了四年之前的承诺。在2017年《仙剑奇侠传6》登陆了Steam平台，不过由于发行商变动等原因，游戏无法在中国大陆购买。路目前正在开发中的系列新作《仙剑奇侠传7》更换了主流的游戏引擎虚幻4，由于《仙剑奇侠传6》取得了许多玩家支持销量近百万，在新作投入了前作两到三倍的预算进行开发，《仙剑奇侠传7》也成了开发成本投入最大的一部仙剑单机游戏。近两年《河洛群侠传》、《天命奇御》以及《古剑奇谭3》等游戏让玩家感受到国产游戏开发实力正在提升，仙剑投入提升也会让玩家们对游戏的期待提升，都期待着预计在2019年发售的《仙剑奇侠传7》能够有更好的画面表现和游戏体验，为国产游戏再创新高。网站导航\r\n'
+             ' \r\n'
+             '\r\n'
+             '\r\n'
+             '\r\n'
+             '            \r\n'
+             '                 \r\n'
+             '                \r\n'
+             '            ',
+ 'image_urls': ['http://www.citreport.com/data/attachment/portal/201902/22/175938oez8czqtz4nplzqd.jpg.thumb.jpg'],
+ 'images': [{'checksum': '2374a7c3467338aca94e252844552ce0',
+             'path': 'full/da607b716f6da166f5652e5bdb9519d3d9d452db.jpg',
+             'url': 'http://www.citreport.com/data/attachment/portal/201902/22/175938oez8czqtz4nplzqd.jpg.thumb.jpg'}],
+ 'title': '四年承诺终兑现！《仙剑奇侠传6》将登陆PS4实体版限量两千套',
+ 'url': 'http://www.citreport.com/content/45724-1.html'}
+2019-02-22 19:23:28 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.citreport.com/content/45720-1.html>
+{'content2': '\r\n'
+             '               2019-2-22 14:59\r\n'
+             '作者: \r\n'
+             '\r\n'
+             '评论:\r\n'
+             '\r\n'
+             '\r\n'
+             '来源: '
+             '雷科技正值英伟达旗下显卡产品线换代之际，在桌面端显卡进入光线追踪时代，笔记本高端显卡也跟随之后，定位较低的新显卡MX250、MX230也出现在英伟达官网，并展示了主要的参数。这两款新显卡定位于取代用于轻薄笔记本和中低端产品的MX150、MX130，接下来同级别的笔记本都将更换上，，其中MX250和MX150一样分为25W和10W两种功耗版本。路英伟达官网信息表示，MX250达到了英特尔i5-8265U处理器的核心显卡UHD620游戏性能的3.5倍，MX230达到了UHD620的2.6倍性能。看起来还不错，不过比较让人遗憾的事实是，。虽然相关产品还未上市无法得知具体分数，不过使用这两款独立显卡的用户，可以放心地在系统中把游戏渲染全交给独立显卡，毕竟这样的性能表现，再也不会出现独显玩游戏比核显还卡的尴尬。路在其他的技术方面，两款显卡都将使用GDDR5显存，定位缘故容量不会高但速度肯定有了保障，都支持英伟达的CUDA加速计算功能和Optimus显卡智能切换技术，也自然给了最新的DirectX '
+             '12接口支持。当然了，SLI技术肯定不会在这个定位的显卡上出现。目前京东上已经出现了来自联想和宏碁，搭载MX250、MX230的笔记本产品，这两款笔记本都还处在预约阶段。在介绍中都提到了相对于旧款显卡的性能提升，但也。路在2月26日之后，使用MX250显卡和MX230显卡的轻薄本就将陆续上市，英伟达的这两款新显卡是骡子是马，届时就能一探究竟。网站导航\r\n'
+             ' \r\n'
+             '\r\n'
+             '\r\n'
+             '\r\n'
+             '            \r\n'
+             '                 \r\n'
+             '                \r\n'
+             '            ',
+ 'image_urls': ['http://www.citreport.com/data/attachment/portal/201902/22/145921ocozj2336secnrpt.jpg.thumb.jpg'],
+ 'images': [{'checksum': '072c217c9d1f3bfd88c18dcdf649d7be',
+             'path': 'full/ee695938ad12e22fd9ff1c855384f526c186b2e3.jpg',
+             'url': 'http://www.citreport.com/data/attachment/portal/201902/22/145921ocozj2336secnrpt.jpg.thumb.jpg'}],
+ 'title': '轻薄本的新独显！MX250现身英伟达官网，核显3.5倍性能',
+ 'url': 'http://www.citreport.com/content/45720-1.html'}
+2019-02-22 19:23:28 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.citreport.com/data/attachment/portal/201902/21/235737i29xhhuywhw222iu.jpg.thumb.jpg> (referer: None)
+2019-02-22 19:23:28 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET http://www.citreport.com/data/attachment/portal/201902/21/235737i29xhhuywhw222iu.jpg.thumb.jpg> referred in <None>
+2019-02-22 19:23:28 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.citreport.com/data/attachment/portal/201902/22/025924m143fjx81ug31f38.jpg.thumb.jpg> (referer: None)
+2019-02-22 19:23:28 [scrapy.pipelines.files] DEBUG: File (downloaded): Downloaded file from <GET http://www.citreport.com/data/attachment/portal/201902/22/025924m143fjx81ug31f38.jpg.thumb.jpg> referred in <None>
+2019-02-22 19:23:28 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.citreport.com/content/45671-1.html>
+{'content2': '\r\n'
+             '               2019-2-22 09:23\r\n'
+             '作者: \r\n'
+             '\r\n'
+             '评论:\r\n'
+             '\r\n'
+             '\r\n'
+             '来源: '
+             '互联网然而，此前发布全球首款可折叠手机并开卖的柔宇对此提出异议。柔宇科技副总裁樊俊超昨日在朋友圈炮轰小米，称小米双折叠手机是买的别人尚未量产的概念柔性屏幕和概念机，并表示小米宣称的“攻克了柔性折叠屏技术”是公然造假。樊俊超称，目前市场上，除了柔派、三星、LG，其他厂商都是买别人还无法量产上市的概念性柔性屏，“谁要不服就把产品拿出来卖，少瞎逼逼，不要在国际上像个缩头乌龟而只会在国内炒概念以假乱真混淆视听。”针对柔宇科技炮轰小米“攻克了柔性折叠屏技术”是公然造假一事，小米官方今日正式发表声明回应此事。小米官方在声明中表示，小米双折叠手机是小米自主研发的创新产品，这款手机的柔性折叠屏本身是小米和供应链合作伙伴联合开发的成果。并非供应链能够提供折叠屏幕就能马上形成折叠手机，这是对产品研发的误解和不专业。小米双折叠工程概念机的屏幕供应商也并非传言所说的LG，所谓“供应链拿来的机器刷MIUI”的无稽之谈纯属谣言。对于柔宇科技昨日炮轰的言论，小米表示，每一款划时代的创新产品都源自于上游供应链厂商和终端厂商共同倾注的大量研发心血。产业链不同环节术业虽然有专攻，但协同倾力研发，才能为用户提供真正优秀的产品和体验。小米双折叠手机是小米自主研发的创新产品。这款手机的柔性折叠屏本身是小米和供应链合作伙伴联合开发的成果。而且折叠手机的柔性折叠屏幕是非常重要的关键组件，但屏幕之外同样还涉及结构、堆叠、元器件定制、交互设计、系统适配等诸多关键创新领域。而在小米双折叠手机中，上述方面都是小米自主创新研发的结果。所以，并非供应链能够提供折叠屏幕就能马上形成折叠手机，这是对产品研发的误解和不专业。小米双折叠工程概念机的屏幕供应商也并非传言所说的LG，所谓“供应链拿来的机器刷MIUI”的无稽之谈纯属谣言。折叠手机小米不是第一家，但能够做到双折叠小米的确是行业首家。双折叠、单折叠和全打开都会让柔性屏幕处于不同的形态，承受不同的应力。如何在整机设计，转轴设计上尽可能的保护好屏幕，是整机设计难点之一。小米双折叠手机从十几种设计中，反复实验验证，才有了比较好的解决方法。每一款划时代的创新产品都源自于上游供应链厂商和终端厂商共同倾注的大量研发心血。产业链不同环节术业虽然有专攻，但协同倾力研发，才能为用户提供真正优秀的产品和体验。我们无法理解同业内有人为何罔顾业内常识，悍然碰瓷、误导公众。折叠屏手机是业内共同关注的热点创新方向，市场很大，真正专注研发，才能推动创新竞争共同进步；也只有真正专注研发，拿出更优秀的产品，才能赢得尊重。网站导航\r\n'
+             ' \r\n'
+             '\r\n'
+             '\r\n'
+             '\r\n'
+             '            \r\n'
+             '                 \r\n'
+             '                \r\n'
+             '            ',
+ 'image_urls': ['http://www.citreport.com/data/attachment/portal/201902/21/235737i29xhhuywhw222iu.jpg.thumb.jpg'],
+ 'images': [{'checksum': 'bf442b2d315c51e8474b9e25879b7d8f',
+             'path': 'full/8de58bde5d4d0ca54c447db4cdceb5c83c3f062e.jpg',
+             'url': 'http://www.citreport.com/data/attachment/portal/201902/21/235737i29xhhuywhw222iu.jpg.thumb.jpg'}],
+ 'title': '小米回应关于折叠手机的质疑：屏幕供应商非LG，更不是拿来机器刷MIUI',
+ 'url': 'http://www.citreport.com/content/45671-1.html'}
+2019-02-22 19:23:28 [scrapy.core.scraper] DEBUG: Scraped from <200 http://www.citreport.com/content/45673-1.html>
+{'content2': '\r\n'
+             '               2019-2-22 09:25\r\n'
+             '作者: \r\n'
+             '\r\n'
+             '评论:\r\n'
+             '\r\n'
+             '\r\n'
+             '来源: '
+             '互联网北京时间2月20日报道，美股周二小幅收高，特朗普有关贸易谈判的讲话令市场情绪乐观。伴随着比特币一度涨至4000美元关口，区块链概念股集体大涨，迅雷涨幅近19%。截至收盘，道指涨8.07点，或0.03%，报25891.32点；标普500指数涨4.16点，或0.15%，报2779.76点；纳指涨14.36点，或0.19%，报7486.77点。中概股股价其他中概股多数上涨，其中包括：迅雷（涨18.92%）、500彩票网（涨13.89%）、一嗨租车（涨13.64%）、灿谷（涨10.53%）、华米科技（涨10.32%）、陌陌（涨7.72%）、云米科技（涨6.85%）、和利时自动化（涨6.57%）、途牛（涨6.17%）、欢聚时代（涨5.50%）、点牛金融（涨5.41%）、奇景光电（涨5.37%）、诺亚财富（涨5.22%）、兰亭集势（涨4.43%）、360金融（涨4.16%）、拍拍贷（涨4.09%）、康迪车业（涨3.85%）、乐居（涨3.50%）、虎牙（涨3.14%）、猎豹移动（涨3.11%）、宜人贷（涨2.84%）、易车（涨2.71%）、流利说（涨2.70%）、搜狗（涨2.68%）、宝尊电商（涨2.47%）、第九城市（涨2.36%）、中通快递（涨2.34%）、无忧英语（涨2.13%）、畅游（涨2.12%）、欧朋浏览器（涨2.09%）、搜狐（涨2.04%）、趣店（涨1.98%）、金融界（涨1.96%）、凤凰新媒体（涨1.81%）、蓝汛（涨1.78%）、华住（涨1.64%）、新浪（涨1.56%）、蘑菇街（涨1.48%）、朴新教育（涨1.45%）、万国数据（涨1.45%）、寺库（涨1.38%）、聚美优品（涨1.21%）、和信贷（涨1.03%）、台积电（涨0.97%）、小赢科技（涨0.92%）、达内科技（涨0.47%）、哔哩哔哩（涨0.34%）、汽车之家（涨0.30%）、世纪互联（涨0.11%）、乐信（涨0.10%）、携程（涨0.03%）。下跌的公司包括：触宝科技（跌23.91%）、国双（跌16.20%）、极光大数据（跌11.44%）、盛世乐居（跌7.45%）、简普科技（跌5.12%）、尚德机构（跌4.94%）、111集团（跌4.19%）、趣头条（跌3.65%）、信而富（跌3.39%）、团车网（跌2.66%）、人人公司（跌2.56%）、中网载线（跌2.38%）、蔚来（跌2.02%）、好未来（跌2.00%）、优信（跌1.73%）、微贷网（跌1.48%）、中芯国际（跌0.99%）、新东方（跌0.92%）、唯品会（跌0.71%）、58同城（跌0.66%）、房天下（跌0.66%）、小牛电动（跌0.46%）。记者获悉，网易（NASDAQ：NTES）和亚马逊正在推进一项有关中国电商业务的重大重组。网易考拉将合并亚马逊中国海外购业务，该谈判历时数月，由网易考拉主动发起并推进，双方或采取换股方式。记者了解到，该交易于2018年年底签约，但进展并不顺利。据内部知情人士透露，在上周末举行的京东集团开年大会上，京东宣布2019年将末位淘汰10%的副总裁级别以上的高管。针对此消息，京东回应称“京东末位淘汰10%副总裁级别以上高官”的消息属实。阿里巴巴集团透露，已于近日完成对中国国际金融股份有限公司（“中金公司”）的入股，持有中金公司港股约2.03亿股，占其港股的11.74%和总已发行股份的4.84%。中金公司作为中国顶尖的投资银行机构，在金融服务领域具备行业领先能力、丰富经验以及创新基因。通过本次入股能结合双方各自在金融、科技、数据等领域的专长，为客户提供更创新、更全面的产品及服务。一嗨租车(NYSE:EHIC)宣布，已与Teamsport\r\n'
+             ' Parent Limited及其全资子公司Teamsport Bidco \r\n'
+             'Limited达成新的私有化协议，调整后的私有化报价降低了近10%。2018年4月6日，一嗨租车宣布与Teamsport '
+             'Parent \r\n'
+             'Limited达成并购协议，后者将以每股普通股6.75美元现金(即每股ADS '
+             '13.50美元)收购一嗨租车。Teamsport \r\n'
+             'Parent由公司董事长兼CEO章瑞平牵头，其他成员还包括霸菱亚洲和安博凯等。周二，一嗨租车又宣布达成新的私有化协议，买方将以每股普通股6.125美元现金(即每股ADS\r\n'
+             ' '
+             '12.25美元)收购一嗨租车。新报价较之前的报价低9.25%。国外科技股多数上涨，其中包括：Roku流媒体（涨2.19%）、雅虎（涨1.84%）、Dropbox（涨1.76%）、Snap（涨1.75%）、Lending\r\n'
+             ' '
+             'Club（涨1.40%）、Twitter（涨1.34%）、Square（涨1.32%）、eBay（涨1.28%）、AMD（涨1.14%）、3D\r\n'
+             ' \r\n'
+             'Systems（涨1.02%）、Salesforce（涨0.98%）、索尼（涨0.94%）、irobot（涨0.94%）、西部数据（涨0.73%）、甲骨文（涨0.58%）、应用材料（涨0.51%）、IBM（涨0.49%）、黑莓（涨0.46%）、红帽（涨0.46%）、思科（涨0.45%）、速汇金（涨0.41%）、Grubhub（涨0.40%）、希捷科技（涨0.39%）、GoPro（涨0.33%）、VMware（涨0.21%）、摩托罗拉系统（涨0.20%）、PayPal（涨0.12%）、Booking\r\n'
+             ' '
+             'Holdings（涨0.10%）、戴尔科技（涨0.07%）。下跌的公司包括：艺电（跌3.63%）、爱立信（跌2.67%）、诺基亚（跌2.37%）、Line（跌2.26%）、Spotify（跌1.51%）、康宁（跌0.90%）、特斯拉（跌0.73%）、赛门铁克（跌0.69%）、Adobe（跌0.63%）、Sonos（跌0.61%）、Yelp（跌0.60%）、英特尔（跌0.50%）、动视暴雪（跌0.27%）、博通（跌0.10%）、美光科技（跌0.07%）。据华尔街日报援引多名知情人士消息，苹果公司正在其重组管理层，并重新调整服务、人工智能、硬件和零售部门的优先级别，以减少公司对iPhone销售的依赖。这一变化从去年起就开始了，包括高级别的管理人员外聘，一些有意义的晋升和后续的重组调整，以及让苹果众多员工都不太习惯的领导层更换。这些新变化导致苹果搁置了几个项目，新上任的管理层也有机会重新评估优先事项。Facebook表示，“对有意义的监管持开放态度”。此前，英国议会大量议员表示，大型科技公司应遵守强制性道德守则，以应对虚假新闻的传播和用户数据的滥用。Facebook的公共政策经理卡里姆·帕兰特(Karim\r\n'
+             ' \r\n'
+             'Palant)回应称：“我们对有意义的监管持开放态度，并支持相关议员提出的关于选举法改革的建议。”他补充说，Facebook“不是一年前的那家公司”，而且已经对其工作流程进行了重大修改。此前，英国议会在一篇调查报告中抨击了Facebook侵犯隐私、利用自身优势地位损害行业竞争对手的行为，呼吁英国政府机构对Facebook展开隐私违规和进行市场垄断的调查。网站导航\r\n'
+             ' \r\n'
+             '\r\n'
+             '\r\n'
+             '\r\n'
+             '            \r\n'
+             '                 \r\n'
+             '                \r\n'
+             '            ',
+ 'image_urls': ['http://www.citreport.com/data/attachment/portal/201902/22/025924m143fjx81ug31f38.jpg.thumb.jpg'],
+ 'images': [{'checksum': 'bf442b2d315c51e8474b9e25879b7d8f',
+             'path': 'full/01e7ed14ad450b549c227abaee8c15c61eaff719.jpg',
+             'url': 'http://www.citreport.com/data/attachment/portal/201902/22/025924m143fjx81ug31f38.jpg.thumb.jpg'}],
+ 'title': '中概股周二集体大涨：迅雷飙升19%，一嗨租车涨13.6%',
+ 'url': 'http://www.citreport.com/content/45673-1.html'}
+2019-02-22 19:23:28 [scrapy.core.engine] INFO: Closing spider (finished)
+2019-02-22 19:23:28 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 8348,
+ 'downloader/request_count': 17,
+ 'downloader/request_method_count/GET': 17,
+ 'downloader/response_bytes': 235811,
+ 'downloader/response_count': 17,
+ 'downloader/response_status_count/200': 17,
+ 'file_count': 9,
+ 'file_status_count/downloaded': 7,
+ 'file_status_count/uptodate': 2,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2019, 2, 22, 11, 23, 28, 372414),
+ 'item_scraped_count': 9,
+ 'log_count/DEBUG': 37,
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 9,
+ 'request_depth_max': 1,
+ 'response_received_count': 17,
+ 'scheduler/dequeued': 10,
+ 'scheduler/dequeued/memory': 10,
+ 'scheduler/enqueued': 10,
+ 'scheduler/enqueued/memory': 10,
+ 'spider_exceptions/IndexError': 1,
+ 'start_time': datetime.datetime(2019, 2, 22, 11, 23, 25, 768475)}
+2019-02-22 19:23:28 [scrapy.core.engine] INFO: Spider closed (finished)

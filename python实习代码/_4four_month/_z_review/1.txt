@@ -1,0 +1,423 @@
+<!DOCTYPE HTML>
+<!--[if lt IE 7 ]> <html lang="zh-CN" class="ie6 ielt8"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="zh-CN" class="ie7 ielt8"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="zh-CN" class="ie8"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="zh-CN">
+<!--<![endif]-->
+<head>
+<meta charset="UTF-8">
+<title>科技快报_砍柴网旗下</title>
+<meta name="keywords" content="科技快报,科技快报网,科技媒体,科技自媒体" />
+<meta name="description" content="科技快报（news.ikanchai.com）是国内第一科技资讯门户，24小时滚动报道互联网、手机、数码、电商、传媒、手游和大数据等行业新闻为大家带来最新的科技资讯。" />
+
+<script type="text/javascript" src="http://img.ikanchai.com/skin/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="http://img.ikanchai.com/skin/js/Common.js"></script>
+<script type="text/javascript" src="http://img.ikanchai.com/skin/js/script.js"></script>
+<script type="text/javascript" language="javascript" src="http://img.ikanchai.com/skin/js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" language="javascript" src="http://img.ikanchai.com/skin/js/jquery.skitter.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('.box_skitter_large').skitter({
+			theme: 'clean',
+			dots: true, 
+			preview: false,
+			numbers_align: 'right'
+		});
+	});
+</script>
+
+<!-- ZUI CSS -->
+<link rel="stylesheet" href="https://cdn.bootcss.com/zui/1.8.1/css/zui.min.css">
+<!-- ZUI JavaScript  -->
+<script src="https://cdn.bootcss.com/zui/1.8.1/js/zui.min.js"></script>
+<link rel="stylesheet" type="text/css" href="http://img.ikanchai.com/skin/css/base.css" />
+<script type="text/javascript">$(window).scroll( function (){var  h_num=$(window).scrollTop();if (h_num>70){$( '.sub_nav' ).addClass( 'nav_fixer' );} else {$( '.sub_nav' ).removeClass( 'nav_fixer' );}});</script>
+<script src="http://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+</head>
+<body>
+<div class="header"><div class="width">
+  <div class="up"><a href="http://app.ikanchai.com/?app=contribution">投稿</a></div>
+  <div class="user"><a href="http://app.ikanchai.com/?app=member&controller=index&action=login">登录</a> | <a href="?app=member&controller=index&action=register">注册</a></div>
+  <script>
+	$(function () {
+		var headUsername = $('.head-username');
+		var headLogout =  $('.head-logout');
+		var headRegister =  $('.head-register');
+		var headLogin = $(".head-login");
+		var headMember = $(".head-member");
+		var hideCss = {color:"#ddd",cursor:"default"};
+		if ($.cookie(COOKIE_PRE+'auth')) {
+			var username = $.cookie(COOKIE_PRE+'username');
+			if(!username) username = $.cookie(COOKIE_PRE+'rememberusername');
+			headUsername.text(username);
+			headLogout.attr('href', APP_URL + '?app=member&controller=index&action=logout');
+			headMember.attr('href', APP_URL + '?app=contribution&controller=panel&action=index');
+			$('.login').hide();	
+			$('.tougao').hide();			
+		} else {
+			headRegister.attr('href', APP_URL + '?app=member&controller=index&action=register');
+			headLogin.attr('href', APP_URL + '?app=member&controller=index&action=login');
+			$('.loginok').hide();		
+		}
+	})
+  </script>
+  <div class="search">
+    <form class="form-search" action="">
+    <input type="text" class="input" id="baiduSearch"/>
+    <div name="" class="icon-search" type="button"></div>
+    <script type="text/javascript">
+		      (function () {
+		        var baiduSearch = $("#baiduSearch");
+		if (baiduSearch == "undefined") return ;
+		var but = baiduSearch.next("i[class=icon-search]");
+		var promptText = baiduSearch.attr("placeholder");
+		but.css({
+			cursor:"pointert"
+		});
+		baiduSearch.focus(function () {
+			searchVal = baiduSearch.val();
+			baiduSearch.attr("placeholder",'');
+			if (searchVal == promptText) baiduSearch.val("");
+		})
+		var searchVal = null;
+		var link = "http://so.ikanchai.com/cse/search?s=754371921301160334&ie=utf-8&q=";
+		var pattern = new RegExp("^\\s*$","i");
+		but.click(function () {
+			searchVal = baiduSearch.val();
+			if (!pattern.test(searchVal)) {
+				link += searchVal;
+				window.open(link); 
+			}
+			else {
+				baiduSearch.val(promptText);
+				 return ;
+			}
+		});
+	})();
+	</script>
+    </form>
+  </div>
+  <div class="logo"><a href="/"><img src="http://img.ikanchai.com/skin/css/logo_kjkb.png"></a></div>
+  <div class="nav"><dl> 
+    <dd><a href="http://www.ikanchai.com/">首页</a></dd>
+    <dd><a href="http://chain.ikanchai.com/" target="_blank">区块链</a></dd>
+    <dd><a href="http://news.ikanchai.com/" target="_blank">科技</a></dd>
+    <dd><a href="http://finance.ikanchai.com/" target="_blank">财经</a></dd>
+    <dd><a href="http://auto.ikanchai.com/" target="_blank">汽车</a></dd>
+    <dt class="dropdown-hover">
+      <a class="icon-th-large" data-toggle="dropdown"></a>
+      <div class="dropdown-menu">
+	    <div class="bg icon-th-large"></div>
+        <ul>
+          <li><a href="http://app.ikanchai.com/roll.php">原创</a></li>
+	      <li><a href="http://www.ikanchai.com/article/view/">态度</a></li>
+	      <li><a href="http://www.ikanchai.com/article/start/">创投</a></li>
+	      <li><a href="http://www.ikanchai.com/article/jinrong/">金融</a></li>
+	      <li><a href="http://tech.ikanchai.com">专栏</a></li>
+	      <li><a href="http://app.ikanchai.com/roll.php">动态</a></li>
+          <div class="clear"></div>
+        </ul>
+      </div>
+    </dt>
+  </dl></div>
+</div></div>
+<div class="width">
+  <div class="sub_left">
+    <div class="sub_nav"><ul>
+      <li class="now"><a href="http://news.ikanchai.com/"><i class="icon icon-bar-chart"></i> 科技快报</a></li>
+      <li class="catid16"><a href="http://news.ikanchai.com/trend/">业界</a></li>
+      <li class="catid17"><a href="http://news.ikanchai.com/mobile/">手机</a></li>
+      <li class="catid25"><a href="http://news.ikanchai.com/jiadian/">家电</a></li>
+      <li class="catid26"><a href="http://news.ikanchai.com/shouyou/">手游</a></li>
+      <li class="catid27"><a href="http://news.ikanchai.com/marketing/">电商</a></li>
+      <li class="catid28"><a href="http://news.ikanchai.com/qiye/">互联网</a></li>
+    </ul></div>
+  </div>
+  <div class="sub_center">
+    <div class="pos_l sub_l">
+      <div id="myNiceCarousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#myNiceCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myNiceCarousel" data-slide-to="1"></li>
+          <li data-target="#myNiceCarousel" data-slide-to="2"></li>
+          <li data-target="#myNiceCarousel" data-slide-to="3"></li>
+          <li data-target="#myNiceCarousel" data-slide-to="4"></li>
+        </ol>
+        <div class="carousel-inner">
+		            <div class="item  active "><img src="http://upload.ikanchai.com/2019/0202/thumb_770_435_1549088598134.png" /><a href="http://news.ikanchai.com/2019/0202/266700.shtml" target="_blank"><div class="b"></div><div class="carousel-caption"><h3>2019年春节，徐庄苏宁总部的日与夜</h3></div></a></div>
+                    <div class="item "><img src="http://upload.ikanchai.com/2019/0111/thumb_770_435_1547169709583.jpeg" /><a href="http://news.ikanchai.com/2019/0111/262114.shtml" target="_blank"><div class="b"></div><div class="carousel-caption"><h3>海信激光电视走进校园开辟护眼新思路</h3></div></a></div>
+                    <div class="item "><img src="http://upload.ikanchai.com/2018/1106/thumb_770_435_1541475362586.jpeg" /><a href="http://www.ikanchai.com/article/20181106/247063.shtml" target="_blank"><div class="b"></div><div class="carousel-caption"><h3>360手机N7 Pro和Lite评测：千元机C位出道 </h3></div></a></div>
+                    <div class="item "><img src="http://upload.ikanchai.com/2018/1031/thumb_770_435_1540962538380.jpeg" /><a href="http://news.ikanchai.com/2018/1031/245650.shtml" target="_blank"><div class="b"></div><div class="carousel-caption"><h3>激光电视究竟动了谁的奶酪?</h3></div></a></div>
+                    <div class="item "><img src="http://upload.ikanchai.com/2018/1026/thumb_770_435_1540522975467.jpg" /><a href="http://news.ikanchai.com/2018/1026/244422.shtml" target="_blank"><div class="b"></div><div class="carousel-caption"><h3>微信解除对快手的分享限制？腾讯官方回复证</h3></div></a></div>
+          
+        </div>
+        <a class="left carousel-control carousel-control_left" href="#myNiceCarousel" data-slide="prev"><span class="icon icon-chevron-left"></span></a>
+        <a class="right carousel-control" href="#myNiceCarousel" data-slide="next"><span class="icon icon-chevron-right"></span></a>
+      </div>
+    </div>
+    <!---->
+    <div class="clear"></div>
+    <div style="padding-top:20px;"><a href="http://www.gongyicn.org/" target="_blank"><img src="http://upload.ikanchai.com/2019/0109/1547006850979.jpg"></a></div>
+    <div class="line_title"><div class="line"></div><h3 class="name"><i class="icon icon-bullhorn"></i> 最新推荐</h3></div>
+    <div class="base_list_content" style="padding-top:0px;">
+            <div class="item">
+        <div class="p"><a href="http://news.ikanchai.com/2019/0130/266232.shtml"  target="_blank"><img src="http://upload.ikanchai.com/2019/0130/thumb_250_165_1548835685725.jpg"/><div class="cat">业界</div></a></div>
+        <div class="r">
+          <div class="t"><a href="http://news.ikanchai.com/2019/0130/266232.shtml"  target="_blank">政府停摆IPO倒计时 打车软件Lyft该何去何从？</a></div>
+          <div class="c">业界 / 猎云网 · 2019-01-30 16:08</div>
+          <div class="d">　当被问到最崇拜哪一位科技领袖时，叫车应用Lyft的CEO Logan Green说出了三位极具手腕的创业者：埃隆·马斯克、马克·扎克伯格以及杰夫·贝佐斯。</div>
+        </div>
+      </div>
+            <div class="item">
+        <div class="p"><a href="http://news.ikanchai.com/2019/0130/266229.shtml"  target="_blank"><img src="http://upload.ikanchai.com/2019/0130/thumb_250_165_1548835413380.jpg"/><div class="cat">业界</div></a></div>
+        <div class="r">
+          <div class="t"><a href="http://news.ikanchai.com/2019/0130/266229.shtml"  target="_blank">微软高管劝降火狐：别开发了 跟我们一起用谷歌Chrome</a></div>
+          <div class="c">业界 / 腾讯科技 · 2019-01-30 16:03</div>
+          <div class="d">不久前，微软公司证实在Edge浏览器中转向昔日竞争对手、谷歌Chrome浏览器的内核或引擎，引发了舆论震动。据外媒最新消息，微软公司一名高管近日表示，火狐浏览器开发商Mozilla应该向Chrome彻底认输，并采...</div>
+        </div>
+      </div>
+            <div class="item">
+        <div class="p"><a href="http://news.ikanchai.com/2019/0130/266187.shtml"  target="_blank"><img src="http://upload.ikanchai.com/2019/0130/1548826926179.jpg"/><div class="cat">手机</div></a></div>
+        <div class="r">
+          <div class="t"><a href="http://news.ikanchai.com/2019/0130/266187.shtml"  target="_blank">小米双折叠屏引争议 供应商证实：与小米联合开发</a></div>
+          <div class="c">手机 / 刘灿邦 · 2019-01-30 13:43</div>
+          <div class="d">在小米公布双折叠手机后，小米与柔宇科技之间关于折叠屏的互怼已闹得沸沸扬扬，先是柔宇副总裁直指小米的“全球首款双折叠屏手机”是买别人家未量产的概念柔性屏幕和概念机；然而，柔宇此举却遭来市场质疑...</div>
+        </div>
+      </div>
+            <div class="item">
+        <div class="p"><a href="http://www.ikanchai.com/article/20190130/266185.shtml"  target="_blank"><img src="http://upload.ikanchai.com/2019/0130/thumb_250_165_1548826708516.jpg"/><div class="cat">VR</div></a></div>
+        <div class="r">
+          <div class="t"><a href="http://www.ikanchai.com/article/20190130/266185.shtml"  target="_blank">继《Cycles》之后，迪士尼将制作全新VR短片</a></div>
+          <div class="c">VR / 映维VR · 2019-01-30 13:38</div>
+          <div class="d">继首部VR短片《Cycles》取得成功之后，华特迪士尼动画工作室（Walt Disney Animation Studios）再次批准了另一个“绝密”VR短片。</div>
+        </div>
+      </div>
+            <div class="item">
+        <div class="p"><a href="http://news.ikanchai.com/2019/0130/266184.shtml"  target="_blank"><img src="http://upload.ikanchai.com/2019/0130/thumb_250_165_1548826539230.jpg"/><div class="cat">业界</div></a></div>
+        <div class="r">
+          <div class="t"><a href="http://news.ikanchai.com/2019/0130/266184.shtml"  target="_blank">威马汽车与美团打车达成战略合作，探索新模式</a></div>
+          <div class="c">业界 / 车云网 · 2019-01-30 13:35</div>
+          <div class="d">2019年1月30日，威马汽车与美团打车达成战略合作，本次战略合作是双方以用户为核心，践行“智慧出行，智慧交通”愿景的重要举措。双方将充分发挥各自的优势资源，本次合作目的在于不断升级高品质的用户出...</div>
+        </div>
+      </div>
+            <div class="item">
+        <div class="p"><a href="http://news.ikanchai.com/2019/0130/266183.shtml"  target="_blank"><img src="http://upload.ikanchai.com/2019/0130/thumb_250_165_1548826299692.jpg"/><div class="cat">手游</div></a></div>
+        <div class="r">
+          <div class="t"><a href="http://news.ikanchai.com/2019/0130/266183.shtml"  target="_blank">网易游戏完成对Quantic Dream少数股权收购</a></div>
+          <div class="c">手游 / 蓝鲸财经记者工作平台 · 2019-01-30 13:32</div>
+          <div class="d">网易游戏宣布完成对Quantic Dream工作室少数股权收购，进一步开发和分销全球在线游戏。</div>
+        </div>
+      </div>
+            <div class="item">
+        <div class="p"><a href="http://news.ikanchai.com/2019/0130/266182.shtml"  target="_blank"><img src="http://upload.ikanchai.com/2019/0130/thumb_250_165_1548826130605.jpg"/><div class="cat">业界</div></a></div>
+        <div class="r">
+          <div class="t"><a href="http://news.ikanchai.com/2019/0130/266182.shtml"  target="_blank">违反隐私法？FB整合三大信息应用计划或在欧盟受阻</a></div>
+          <div class="c">业界 / 腾讯科技 · 2019-01-30 13:29</div>
+          <div class="d">1月30日消息，据外媒报道，Facebook有意整合Instagram、WhatsApp以及Messenger三大信息应用，但该计划可能因违反隐私法而在欧盟受阻。</div>
+        </div>
+      </div>
+            <div class="item">
+        <div class="p"><a href="http://news.ikanchai.com/2019/0130/266180.shtml"  target="_blank"><img src="http://upload.ikanchai.com/2019/0130/thumb_250_165_1548825815158.jpg"/><div class="cat">业界</div></a></div>
+        <div class="r">
+          <div class="t"><a href="http://news.ikanchai.com/2019/0130/266180.shtml"  target="_blank">蔚来发行6.5亿美元可转换债 腾讯、高瓴资本认购</a></div>
+          <div class="c">业界 / 陆一夫 · 2019-01-30 13:23</div>
+          <div class="d">1月30日，蔚来汽车宣布拟发行6.5亿美元可转换债券，票息为3.5%-4%，转换溢价在27.5%-32.5%。其中，蔚来的主要股东腾讯将认购3000万美元，高瓴资本认购1000万美元。</div>
+        </div>
+      </div>
+            <div class="item">
+        <div class="p"><a href="http://news.ikanchai.com/2019/0130/266178.shtml"  target="_blank"><img src="http://upload.ikanchai.com/2019/0130/thumb_250_165_1548825474951.jpg"/><div class="cat">业界</div></a></div>
+        <div class="r">
+          <div class="t"><a href="http://news.ikanchai.com/2019/0130/266178.shtml"  target="_blank">Facebook又曝丑闻：每月付费在用户手机上运行监控APP</a></div>
+          <div class="c">业界 / 腾讯科技 · 2019-01-30 13:18</div>
+          <div class="d">之前，Facebook爆出“剑桥分析”等不计其数的丑闻，遭到全球舆论的炮轰，掌门人扎克伯格被要求辞职。据外媒最新消息，Facebook又爆出另外一宗丑闻，即向用户每月支付费用，在智能手机上安装监控软件，采集...</div>
+        </div>
+      </div>
+            <div class="item">
+        <div class="p"><a href="http://www.ikanchai.com/article/20190130/266177.shtml"  target="_blank"><img src="http://upload.ikanchai.com/2019/0130/thumb_250_165_1548825344532.jpg"/><div class="cat">创投</div></a></div>
+        <div class="r">
+          <div class="t"><a href="http://www.ikanchai.com/article/20190130/266177.shtml"  target="_blank">数据管理初创Collibra融资1亿美元 谷歌母公司领投</a></div>
+          <div class="c">创投 / 腾讯科技 · 2019-01-30 13:15</div>
+          <div class="d">据外媒报道，数据管理初创公司ColLibra刚刚融资了1亿美元，并获得了逾10亿美元的估值，从而加入了科技独角兽的行列。</div>
+        </div>
+      </div>
+      
+      <div class="" id="moreBtn"><a href="#">浏览更多</a></div>
+    </div>
+
+  </div>
+  <div class="sub_right" style="padding-top:30px;">
+    <div class="base_box">
+      <div class="title">
+        <h3 class="name"><i class="icon-quote-left"></i> 热文榜单</h3>
+      </div>
+      <div class="content txt_hot">
+         
+        <div class="item">
+          <div class="i"></div>
+          <div class="r">
+            <div class="t"><a href="http://tech.ikanchai.com/article/20190213/267528.shtml" target="_blank">和肿瘤赛跑，中国新医药的创新速度</a></div>
+            <div class="d">科技专栏</div>
+          </div>
+          <div class="clear"></div>
+        </div>
+         
+        <div class="item">
+          <div class="i"></div>
+          <div class="r">
+            <div class="t"><a href="http://tech.ikanchai.com/article/20190215/267888.shtml" target="_blank">坤鹏论：股市里亏的钱都被谁赚走了？</a></div>
+            <div class="d">科技专栏</div>
+          </div>
+          <div class="clear"></div>
+        </div>
+         
+        <div class="item">
+          <div class="i"></div>
+          <div class="r">
+            <div class="t"><a href="http://tech.ikanchai.com/article/20190212/267380.shtml" target="_blank">坤鹏论：为什么你终将在股市中亏钱</a></div>
+            <div class="d">科技专栏</div>
+          </div>
+          <div class="clear"></div>
+        </div>
+         
+        <div class="item">
+          <div class="i"></div>
+          <div class="r">
+            <div class="t"><a href="http://tech.ikanchai.com/article/20190212/267354.shtml" target="_blank">押宝流浪地球，成为股市赢家，马云的阿里影业到底是怎么炼成的？</a></div>
+            <div class="d">科技专栏</div>
+          </div>
+          <div class="clear"></div>
+        </div>
+         
+        <div class="item">
+          <div class="i"></div>
+          <div class="r">
+            <div class="t"><a href="http://tech.ikanchai.com/article/20190211/267217.shtml" target="_blank">库克终于宣布认错，这个时候给iPhone降价到底晚不晚？</a></div>
+            <div class="d">科技专栏</div>
+          </div>
+          <div class="clear"></div>
+        </div>
+         
+        <div class="item">
+          <div class="i"></div>
+          <div class="r">
+            <div class="t"><a href="http://news.ikanchai.com/2019/0212/267410.shtml" target="_blank">官宣：等不及了！荣耀V20上市时间还有多久</a></div>
+            <div class="d">互联网</div>
+          </div>
+          <div class="clear"></div>
+        </div>
+         
+        <div class="item">
+          <div class="i"></div>
+          <div class="r">
+            <div class="t"><a href="http://tech.ikanchai.com/article/20190214/267685.shtml" target="_blank">巨亏40亿，裁员4500人，捷豹路虎跌落神坛真是中国惹的祸？</a></div>
+            <div class="d">科技专栏</div>
+          </div>
+          <div class="clear"></div>
+        </div>
+         
+        <div class="item">
+          <div class="i"></div>
+          <div class="r">
+            <div class="t"><a href="http://www.ikanchai.com/article/20190214/267828.shtml" target="_blank">“招工战”升级：利用快手直播招人，这类工种月薪开价上万</a></div>
+            <div class="d">创投</div>
+          </div>
+          <div class="clear"></div>
+        </div>
+         
+        <div class="item">
+          <div class="i"></div>
+          <div class="r">
+            <div class="t"><a href="http://www.ikanchai.com/article/20190210/267153.shtml" target="_blank">2019 年春晚的手机被华为承包 具体型号曝光</a></div>
+            <div class="d">新零售</div>
+          </div>
+          <div class="clear"></div>
+        </div>
+         
+        <div class="item">
+          <div class="i"></div>
+          <div class="r">
+            <div class="t"><a href="http://news.ikanchai.com/2019/0212/267395.shtml" target="_blank">荣耀V20大曝光,你想知道的这里全都有</a></div>
+            <div class="d">互联网</div>
+          </div>
+          <div class="clear"></div>
+        </div>
+              </div>
+    </div>
+    <div style="padding:30px 0px;"><a href="http://www.ikanchai.com/article/20181215/256607.shtml" target="_blank"><img src="http://upload.ikanchai.com/2018/1126/1543243147219.jpg"></a></div>
+    <div class="line_title"><div class="line"></div><h3 class="name"><i class="icon icon-heart-empty"></i> 相关推荐</h3></div>
+    <div class="right_pic_list">
+            <div class="item"><a href="http://www.ikanchai.com/article/20181119/250203.shtml" target="_blank"><img src="http://upload.ikanchai.com/2018/1119/thumb_250_165_1542591891753.jpg"/><h5 class="t">揭秘恒大与贾跃亭纠纷的事实与隐秘情节</h5></a></div>
+            <div class="item"><a href="http://news.ikanchai.com/2018/1115/249661.shtml" target="_blank"><img src="http://upload.ikanchai.com/2018/1115/thumb_250_165_1542293827777.jpg"/><h5 class="t">从钢铁侠到人造太阳，斯坦 · 李的这些天马行空正走向现实</h5></a></div>
+            <div class="item"><a href="http://www.ikanchai.com/article/20181113/248936.shtml" target="_blank"><img src="http://upload.ikanchai.com/2018/1113/thumb_250_165_1542095397791.jpeg"/><h5 class="t">对造车梦仍不死心  贾跃亭掏出64%股权激励员工  </h5></a></div>
+            <div class="item"><a href="http://www.ikanchai.com/article/20181114/249200.shtml" target="_blank"><img src="http://upload.ikanchai.com/2018/1114/thumb_250_165_1542179897281.jpg"/><h5 class="t">人人网易主    2000万美元贱卖给多牛互动</h5></a></div>
+            <div class="item"><a href="http://www.ikanchai.com/article/20181114/249218.shtml" target="_blank"><img src="http://upload.ikanchai.com/2018/1114/thumb_250_165_1542181768771.jpg"/><h5 class="t">自营电商变现失败    美图停运美图美妆</h5></a></div>
+            <div class="item"><a href="http://www.ikanchai.com/article/20181115/249568.shtml" target="_blank"><img src="http://upload.ikanchai.com/2018/1115/thumb_250_165_1542268455369.jpg"/><h5 class="t">分时租赁业务跑不通     美团选择关停</h5></a></div>
+      
+    </div>  
+  </div>
+  <div class="clear"></div>
+  <!---->
+</div>
+
+<div class="footer">
+  <div class="width">
+    <div class="l">
+      <img src="http://img.ikanchai.com/skin/css/footer_logo.png">
+      <div class="txt">砍柴网（ikanchai.com）创立于2013年，始终秉承观点独到、全面深入、有料有趣的宗旨，在科技与人文之间寻找商业新价值。</div>
+    </div>
+    <div class="c">
+      <div class="page"><a href="http://www.ikanchai.com/aboutme/">关于我们</a> | <a href="http://www.ikanchai.com/aboutme/contact.html">联系我们</a> | <a href="http://www.ikanchai.com/aboutme/cooperation.html">商务合作</a> | <a href="http://www.ikanchai.com/aboutme/report.html">寻求报道</a> | <a href="http://www.ikanchai.com/aboutme/submission.html">投稿须知</a> | <a href="http://www.ikanchai.com/aboutme/sitemap.html">网站地图</a></div>
+      <div class="contact">
+        <div class="item">意见反馈：kefu@ikanchai.com</div>
+        <div class="item">稿件投诉：post@ikanchai.com</div>
+        <div class="item">7×24小时：4008-678-968</div>
+        <div class="item">商务合作：010-84641320-888</div>
+        <div class="item">内容合作QQ：1587015870</div>
+        <div class="item">客服QQ：1963519635</div>
+        <div class="clear"></div>      
+      </div>
+    </div>
+    <div class="r">
+      <h3>关注我们</h3>
+      <div class="icon"><a class="icon-weibo"><div class="tips">关注砍柴网官方微博<br />每日获取最新科技动态</div><i class="icon icon-sort-down"></i></a><a class="icon-wechat"><div class="tips"><img src="http://img.ikanchai.com/skin/images/2wm.jpg"><br />关注砍柴网微信公众号<br />探索科技与商业的逻辑</div><i class="icon icon-sort-down"></i></a><a class="icon-qq"><div class="tips">商务合作、媒体邀约<br />赶紧联系我们</div><i class="icon icon-sort-down"></i></a></div>
+    </div>
+    <div class="clear"></div>
+    <div class="cert"><img src="http://img.ikanchai.com/skin/css/cert1.png"><img src="http://img.ikanchai.com/skin/css/cert2.png"><img src="http://img.ikanchai.com/skin/css/cert3.png"><img src="http://img.ikanchai.com/skin/css/cert4.png"><img src="http://img.ikanchai.com/skin/css/cert5.png"><img src="http://img.ikanchai.com/skin/css/cert6.png"><img src="http://img.ikanchai.com/skin/css/cert7.png"><a key="564ad173efbfb05d87e1fcc6" logo_size="83x30" logo_type="realname" href="http://www.anquan.org"><img src="http://img.ikanchai.com/skin/css/cert8.png"><span style="display:none;"><script src="http://static.anquan.org/static/outer/js/aq_auth.js"></script></span></a></div>
+  </div>
+  <div class="byinfo">Copyright © 2013-2018 砍柴网 / 京ICP备15042874号-1 / <a target="_blank" href="#" >京公网安备 11010502032797号</a> / 本站由CMSTOP、阿里云、群英、腾讯云提供驱动力</div>
+</div>
+<script type="text/javascript">
+$('[data-toggle="tooltip"]').tooltip();
+</script>
+
+<!--百度统计-->
+<script>
+(function(){
+    var bp = document.createElement('script');
+    bp.src = '//push.zhanzhang.baidu.com/push.js';
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?c4f2d1c691f68f2f25b5ce0343b37b96";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<!--百度统计-->
+
+<span style="display:none"><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_5062324'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/stat.php%3Fid%3D5062324' type='text/javascript'%3E%3C/script%3E"));</script></span>
+
+<div id="moquu_wxin" class="moquu_wxin"><a href="javascript:void(0)">1
+  <div class="moquu_wxinh"></div>
+  </a></div>
+<div id="moquu_wmaps"><a href="http://app.ikanchai.com/?app=guestbook" class='moquu_wmaps' target="_blank" >3</a></div>
+<a id="moquu_top" href="javascript:void(0)"></a> 
+
+</body>
+</html> 

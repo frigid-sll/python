@@ -1,0 +1,32 @@
+#迭代器
+
+# class F(object):
+#     def __init__(self,n):
+#         self.num1=0
+#         self.num2=1
+#         self.current=0
+#         self.n=n
+#     def __next__(self):
+#         if self.current<self.n:
+#             num=self.num1
+#             self.num1,self.num2=self.num2,self.num1+self.num2
+#             self.current+=1
+#             return num
+#         else:
+#             raise StopIteration
+#     def __iter__(self):
+#         return self
+# f=F(10)
+# for x in f:
+#     print(x)
+
+
+# a=[x for x in range(100)]
+# b=[a[x:x+3] for x in range(0,len(a)-1,3)]
+# print(b)
+
+import os
+os.rename('迭代器.py','列表推导式.py')
+
+# print('\n'.join([' '.join(['%d*%d=%d'%(x,y,x*y) for x in range(1,1+y)]) for y in range(1,10)]))
+

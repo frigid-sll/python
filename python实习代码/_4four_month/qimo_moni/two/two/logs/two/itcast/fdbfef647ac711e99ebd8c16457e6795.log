@@ -1,0 +1,459 @@
+2019-05-20 14:25:03 [scrapy.utils.log] INFO: Scrapy 1.6.0 started (bot: two)
+2019-05-20 14:25:03 [scrapy.utils.log] INFO: Versions: lxml 4.3.3.0, libxml2 2.9.5, cssselect 1.0.3, parsel 1.5.1, w3lib 1.20.0, Twisted 18.9.0, Python 3.7.2 (tags/v3.7.2:9a3ffc0492, Dec 23 2018, 23:09:28) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 19.0.0 (OpenSSL 1.1.1b  26 Feb 2019), cryptography 2.6.1, Platform Windows-10-10.0.17134-SP0
+2019-05-20 14:25:03 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'two', 'LOG_FILE': 'logs\\two\\itcast\\fdbfef647ac711e99ebd8c16457e6795.log', 'NEWSPIDER_MODULE': 'two.spiders', 'SPIDER_MODULES': ['two.spiders']}
+2019-05-20 14:25:03 [scrapy.extensions.telnet] INFO: Telnet Password: ec93661249f9a1c5
+2019-05-20 14:25:03 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2019-05-20 14:25:03 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2019-05-20 14:25:03 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2019-05-20 14:25:03 [scrapy.middleware] INFO: Enabled item pipelines:
+['two.pipelines.newsPipeline', 'two.pipelines.TwoPipeline']
+2019-05-20 14:25:03 [scrapy.core.engine] INFO: Spider opened
+2019-05-20 14:25:03 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-05-20 14:25:03 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2019-05-20 14:25:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.xminseo.com/page/1> (referer: None)
+2019-05-20 14:25:05 [scrapy.pipelines.files] DEBUG: File (uptodate): Downloaded image from <GET https://www.xminseo.com/wp-content/uploads/2019/03/1-9.jpg> referred in <None>
+2019-05-20 14:25:05 [scrapy.pipelines.files] DEBUG: File (uptodate): Downloaded image from <GET https://www.xminseo.com/wp-content/uploads/2019/03/1.png> referred in <None>
+2019-05-20 14:25:05 [scrapy.pipelines.files] DEBUG: File (uptodate): Downloaded image from <GET https://www.xminseo.com/wp-content/uploads/2019/03/1-8.jpg> referred in <None>
+2019-05-20 14:25:05 [scrapy.pipelines.files] DEBUG: File (uptodate): Downloaded image from <GET https://www.xminseo.com/wp-content/uploads/2019/03/1-7.jpg> referred in <None>
+2019-05-20 14:25:05 [scrapy.pipelines.files] DEBUG: File (uptodate): Downloaded image from <GET https://www.xminseo.com/wp-content/uploads/2019/03/1-6.jpg> referred in <None>
+2019-05-20 14:25:05 [scrapy.pipelines.files] DEBUG: File (uptodate): Downloaded image from <GET https://www.xminseo.com/wp-content/uploads/2019/03/1-5.jpg> referred in <None>
+2019-05-20 14:25:05 [scrapy.pipelines.files] DEBUG: File (uptodate): Downloaded image from <GET https://www.xminseo.com/wp-content/uploads/2019/03/1-4.jpg> referred in <None>
+2019-05-20 14:25:05 [scrapy.pipelines.files] DEBUG: File (uptodate): Downloaded image from <GET https://www.xminseo.com/wp-content/uploads/2019/03/1-3.jpg> referred in <None>
+2019-05-20 14:25:05 [scrapy.pipelines.files] DEBUG: File (uptodate): Downloaded image from <GET https://www.xminseo.com/wp-content/uploads/2019/03/1-2.jpg> referred in <None>
+2019-05-20 14:25:05 [scrapy.pipelines.files] DEBUG: File (uptodate): Downloaded image from <GET https://www.xminseo.com/wp-content/uploads/2019/03/1-1.jpg> referred in <None>
+2019-05-20 14:25:05 [scrapy.pipelines.files] DEBUG: File (uptodate): Downloaded image from <GET https://www.xminseo.com/wp-content/uploads/2019/03/1.jpg> referred in <None>
+2019-05-20 14:25:05 [scrapy.pipelines.files] DEBUG: File (uptodate): Downloaded image from <GET https://www.xminseo.com/wp-content/uploads/2019/02/1-5.jpg> referred in <None>
+2019-05-20 14:25:05 [scrapy.pipelines.files] DEBUG: File (uptodate): Downloaded image from <GET https://www.xminseo.com/wp-content/uploads/2019/02/1-4.jpg> referred in <None>
+2019-05-20 14:25:05 [scrapy.pipelines.files] DEBUG: File (uptodate): Downloaded image from <GET https://www.xminseo.com/wp-content/uploads/2019/02/1.png> referred in <None>
+2019-05-20 14:25:05 [scrapy.pipelines.files] DEBUG: File (uptodate): Downloaded image from <GET https://www.xminseo.com/wp-content/uploads/2019/02/1-3.jpg> referred in <None>
+2019-05-20 14:25:05 [scrapy.pipelines.files] DEBUG: File (uptodate): Downloaded image from <GET https://www.xminseo.com/wp-content/uploads/2019/02/1-2.jpg> referred in <None>
+2019-05-20 14:25:05 [scrapy.pipelines.files] DEBUG: File (uptodate): Downloaded image from <GET https://www.xminseo.com/wp-content/uploads/2019/02/1-1.jpg> referred in <None>
+2019-05-20 14:25:05 [scrapy.pipelines.files] DEBUG: File (uptodate): Downloaded image from <GET https://www.xminseo.com/wp-content/uploads/2019/02/1.jpg> referred in <None>
+2019-05-20 14:25:05 [scrapy.pipelines.files] DEBUG: File (uptodate): Downloaded image from <GET https://www.xminseo.com/wp-content/uploads/2019/01/1-9.jpg> referred in <None>
+2019-05-20 14:25:05 [scrapy.pipelines.files] DEBUG: File (uptodate): Downloaded image from <GET https://www.xminseo.com/wp-content/uploads/2019/01/1-8.jpg> referred in <None>
+2019-05-20 14:25:05 [scrapy.pipelines.files] DEBUG: File (uptodate): Downloaded image from <GET https://www.xminseo.com/wp-content/uploads/2019/01/1-7.jpg> referred in <None>
+2019-05-20 14:25:05 [scrapy.pipelines.files] DEBUG: File (uptodate): Downloaded image from <GET https://www.xminseo.com/wp-content/uploads/2019/01/1-6.jpg> referred in <None>
+2019-05-20 14:25:05 [scrapy.pipelines.files] DEBUG: File (uptodate): Downloaded image from <GET https://www.xminseo.com/wp-content/uploads/2019/01/1-5.jpg> referred in <None>
+2019-05-20 14:25:05 [scrapy.pipelines.files] DEBUG: File (uptodate): Downloaded image from <GET https://www.xminseo.com/wp-content/uploads/2019/01/1-4.jpg> referred in <None>
+2019-05-20 14:25:05 [scrapy.pipelines.files] DEBUG: File (uptodate): Downloaded image from <GET https://www.xminseo.com/wp-content/uploads/2019/01/1-3.jpg> referred in <None>
+2019-05-20 14:25:05 [scrapy.core.scraper] ERROR: Error processing {'content': ' \xa0\n'
+            '实际上seo与运营是不可分割的，网站运营或者网络运营是包含seo的，如果非要解释seo运营是什么意思，可以从不同的角度来阐述。通俗来讲seo运营是指为了满足用户搜索查询需求而做的搜索引擎优化工作，主体是搜索引擎，方式是seo，日常工作即运营。\n'
+            '\n'
+            '一个真正的运营，就等...',
+ 'count': ' 8743℃',
+ 'date': ' 2019-03-23',
+ 'image': 'https://www.xminseo.com/wp-content/uploads/2019/03/1-9.jpg',
+ 'like': '23',
+ 'title': 'seo运营是什么意思?  ',
+ 'url': 'https://www.xminseo.com/14609.html'}
+Traceback (most recent call last):
+  File "d:\python3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\向寒°\appdata\local\temp\two-1558331641-e_amo428.egg\two\pipelines.py", line 29, in item_completed
+    os.rename('./img/'+image_path,'./img/'+item['title']+'.jpg')
+OSError: [WinError 123] 文件名、目录名或卷标语法不正确。: './img/full/e36779fb8ca7c580e02b41a5d4823a703ef18fd3.jpg' -> './img/seo运营是什么意思?  .jpg'
+2019-05-20 14:25:05 [scrapy.core.scraper] ERROR: Error processing {'content': ' \xa0\n'
+            '今天看到一个有趣的问题：seo要学ps吗？这个问题显得深度不够，但对于刚接触seo的朋友来讲也许真是问题。自古有技多不压身这一个说法，学好ps能处理并制作包含大量劳动力的图片素材，将这些素材展现到网站中，从搜索引擎优化的角度来看，是有利于网站seo优化的；从另外一个...',
+ 'count': ' 7893℃',
+ 'date': ' 2019-03-20',
+ 'image': 'https://www.xminseo.com/wp-content/uploads/2019/03/1.png',
+ 'like': '10',
+ 'title': 'seo要学ps吗？  ',
+ 'url': 'https://www.xminseo.com/14606.html'}
+Traceback (most recent call last):
+  File "d:\python3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\向寒°\appdata\local\temp\two-1558331641-e_amo428.egg\two\pipelines.py", line 29, in item_completed
+    os.rename('./img/'+image_path,'./img/'+item['title']+'.jpg')
+FileExistsError: [WinError 183] 当文件已存在时，无法创建该文件。: './img/full/492b25d641f5c0b42cb59d6a92e8d3ff6c2dcc78.jpg' -> './img/seo要学ps吗？  .jpg'
+2019-05-20 14:25:05 [scrapy.core.scraper] ERROR: Error processing {'content': ' \xa0\n'
+            '一招鲜吃遍天，假设有过硬的seo技术，那么就有海量的项目可以通过seo来实现赚钱盈利目的。seo是基于搜索引擎海量用户的，哪里有流量，哪里就可以把流量转化为盈利，这是毋庸置疑的事实。\n'
+            '\n'
+            '一方面通过一些项目来实现seo赚钱是可行的，并且渠道非常多；另外一方面，林林总总...',
+ 'count': ' 8819℃',
+ 'date': ' 2019-03-17',
+ 'image': 'https://www.xminseo.com/wp-content/uploads/2019/03/1-8.jpg',
+ 'like': '11',
+ 'title': '经典seo赚钱项目案例展示  ',
+ 'url': 'https://www.xminseo.com/14602.html'}
+Traceback (most recent call last):
+  File "d:\python3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\向寒°\appdata\local\temp\two-1558331641-e_amo428.egg\two\pipelines.py", line 29, in item_completed
+    os.rename('./img/'+image_path,'./img/'+item['title']+'.jpg')
+FileExistsError: [WinError 183] 当文件已存在时，无法创建该文件。: './img/full/5975ad5baf9691c1f343917900e84d24f43b9fc0.jpg' -> './img/经典seo赚钱项目案例展示  .jpg'
+2019-05-20 14:25:05 [scrapy.core.scraper] ERROR: Error processing {'content': ' \xa0\n'
+            '从事seo发文章就跟我们吃饭睡觉一样是必须的，seo文章有基础的规范，如将关键词布局到标题以及内容中就是需要遵循的点。在做搜索引擎优化的过程中，大家都在发文章，写内容，最终的结果却是差别很大，seo效果也是千差万别，为什么会出现这种情况？\n'
+            '\n'
+            '从seo文章关键词布局方...',
+ 'count': ' 11083℃',
+ 'date': ' 2019-03-14',
+ 'image': 'https://www.xminseo.com/wp-content/uploads/2019/03/1-7.jpg',
+ 'like': '17',
+ 'title': 'seo文章关键词怎么布局才有效果  ',
+ 'url': 'https://www.xminseo.com/14599.html'}
+Traceback (most recent call last):
+  File "d:\python3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\向寒°\appdata\local\temp\two-1558331641-e_amo428.egg\two\pipelines.py", line 29, in item_completed
+    os.rename('./img/'+image_path,'./img/'+item['title']+'.jpg')
+FileExistsError: [WinError 183] 当文件已存在时，无法创建该文件。: './img/full/fa24feb0f2c22ccad979fd37d3357f61ad76469a.jpg' -> './img/seo文章关键词怎么布局才有效果  .jpg'
+2019-05-20 14:25:05 [scrapy.core.scraper] ERROR: Error processing {'content': ' \xa0\n'
+            '“搜索排名无法如想象的那样上升，创业公司的主页无法吸引顾客。”老板们有没有这样的烦恼呢?搜索引擎优化即网站优化,是使网站的搜索结果排名靠前的对策。这次，向大家解说如何让创业企业的主页做好。\n'
+            'SEO对策中，不优先考虑用户的便利性，以重视搜索引擎的排名上升为目的。这是被...',
+ 'count': ' 8307℃',
+ 'date': ' 2019-03-13',
+ 'image': 'https://www.xminseo.com/wp-content/uploads/2019/03/1-6.jpg',
+ 'like': '2',
+ 'title': '创业公司应该采用怎样的SEO对策  ',
+ 'url': 'https://www.xminseo.com/14596.html'}
+Traceback (most recent call last):
+  File "d:\python3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\向寒°\appdata\local\temp\two-1558331641-e_amo428.egg\two\pipelines.py", line 29, in item_completed
+    os.rename('./img/'+image_path,'./img/'+item['title']+'.jpg')
+FileExistsError: [WinError 183] 当文件已存在时，无法创建该文件。: './img/full/1e03be99e519c83646af3136d120901668ae9403.jpg' -> './img/创业公司应该采用怎样的SEO对策  .jpg'
+2019-05-20 14:25:05 [scrapy.core.scraper] ERROR: Error processing {'content': ' \xa0\n'
+            '坊间流传着一个观点：seo作用于网站的细化操作点是相同的，但不同的网站如金融网站的seo推广侧重点有所不同，在制定金融网站seo推广方案的时候，诸如网站安全就显得尤为重要，还有一些有用的点包括百科建设等也不可或缺。\n'
+            '\n'
+            '很多小白seo总认为做seo有一招制敌的技术，这...',
+ 'count': ' 8906℃',
+ 'date': ' 2019-03-13',
+ 'image': 'https://www.xminseo.com/wp-content/uploads/2019/03/1-5.jpg',
+ 'like': '2',
+ 'title': '有用的金融seo推广方案  ',
+ 'url': 'https://www.xminseo.com/14593.html'}
+Traceback (most recent call last):
+  File "d:\python3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\向寒°\appdata\local\temp\two-1558331641-e_amo428.egg\two\pipelines.py", line 29, in item_completed
+    os.rename('./img/'+image_path,'./img/'+item['title']+'.jpg')
+FileExistsError: [WinError 183] 当文件已存在时，无法创建该文件。: './img/full/7ef2e8b76acb51d2f0cebf2c2ee9e78538e89df1.jpg' -> './img/有用的金融seo推广方案  .jpg'
+2019-05-20 14:25:05 [scrapy.core.scraper] ERROR: Error processing {'content': ' \xa0\n'
+            '从需求结果分析来看，任何网站都需要进行seo操作，没有不想获取流量的网站，网站建设与seo是有契合点的。不同的群体建设网站后，由于各种原因，会采用不同的方式来对网站进行seo，有将网站seo外包的，也有雇佣seo技术人员操作的，不管哪种方式，都需要达到一个基本需求：...',
+ 'count': ' 12249℃',
+ 'date': ' 2019-03-08',
+ 'image': 'https://www.xminseo.com/wp-content/uploads/2019/03/1-4.jpg',
+ 'like': '7',
+ 'title': '如何对网站进行seo  ',
+ 'url': 'https://www.xminseo.com/14589.html'}
+Traceback (most recent call last):
+  File "d:\python3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\向寒°\appdata\local\temp\two-1558331641-e_amo428.egg\two\pipelines.py", line 29, in item_completed
+    os.rename('./img/'+image_path,'./img/'+item['title']+'.jpg')
+FileExistsError: [WinError 183] 当文件已存在时，无法创建该文件。: './img/full/bdea2c67f4a1dc104d4cf17840faa6cd18112583.jpg' -> './img/如何对网站进行seo  .jpg'
+2019-05-20 14:25:05 [scrapy.core.scraper] ERROR: Error processing {'content': ' \xa0\n'
+            '做seo需要随大流，百度搜索引擎一家独大，百度在推崇https改造，百度自己的网站也改造成了https，随大流就是建议我们也对自己的网站进行改造，很多人在对自己的网站进行改造后发现网站排名下降了，其中的原因估计在于百度搜索引擎对https改造的支持不够，或者说有数据...',
+ 'count': ' 5479℃',
+ 'date': ' 2019-03-07',
+ 'image': 'https://www.xminseo.com/wp-content/uploads/2019/03/1-3.jpg',
+ 'like': '3',
+ 'title': '分享网站https改造后排名下降的原因  ',
+ 'url': 'https://www.xminseo.com/14585.html'}
+Traceback (most recent call last):
+  File "d:\python3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\向寒°\appdata\local\temp\two-1558331641-e_amo428.egg\two\pipelines.py", line 29, in item_completed
+    os.rename('./img/'+image_path,'./img/'+item['title']+'.jpg')
+FileExistsError: [WinError 183] 当文件已存在时，无法创建该文件。: './img/full/ef8c45e57a2239e9ca158e886810df48b815eede.jpg' -> './img/分享网站https改造后排名下降的原因  .jpg'
+2019-05-20 14:25:05 [scrapy.core.scraper] ERROR: Error processing {'content': ' \xa0\n'
+            '将seo外包给第三方是一种可取的方式，自己组建seo团队也是可行的，两种方式各有利弊，根据自己的情况选择即可。那么，如何组建靠谱的seo团队呢？答案在于各个细化的岗位的人才技能本身，合适的位置布局合适的人才，离最靠谱的seo技术团队就不远了。\n'
+            '\n'
+            'seo团队如何建立是...',
+ 'count': ' 5915℃',
+ 'date': ' 2019-03-06',
+ 'image': 'https://www.xminseo.com/wp-content/uploads/2019/03/1-2.jpg',
+ 'like': '7',
+ 'title': '如何组建靠谱的seo团队？  ',
+ 'url': 'https://www.xminseo.com/14580.html'}
+Traceback (most recent call last):
+  File "d:\python3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\向寒°\appdata\local\temp\two-1558331641-e_amo428.egg\two\pipelines.py", line 29, in item_completed
+    os.rename('./img/'+image_path,'./img/'+item['title']+'.jpg')
+FileExistsError: [WinError 183] 当文件已存在时，无法创建该文件。: './img/full/bbdf08f32455fffce3e013de14049255e5fe4bda.jpg' -> './img/如何组建靠谱的seo团队？  .jpg'
+2019-05-20 14:25:05 [scrapy.core.scraper] ERROR: Error processing {'content': ' \xa0\n'
+            '人人做seo都需要发外链，同样的工作最终的结果却是千差万别，有些人发的外链让网站优化的结果更好，有些人发外链带给网站的优化结果是无效甚至于是反作用的。外链怎么优化才能有助于seo，或者说seo外链怎么发才更有效果？\n'
+            '针对外链搜索引擎有多种算法，从可以落地的语言来讲，...',
+ 'count': ' 6062℃',
+ 'date': ' 2019-03-05',
+ 'image': 'https://www.xminseo.com/wp-content/uploads/2019/03/1-1.jpg',
+ 'like': '6',
+ 'title': 'seo外链怎么优化？  ',
+ 'url': 'https://www.xminseo.com/14577.html'}
+Traceback (most recent call last):
+  File "d:\python3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\向寒°\appdata\local\temp\two-1558331641-e_amo428.egg\two\pipelines.py", line 29, in item_completed
+    os.rename('./img/'+image_path,'./img/'+item['title']+'.jpg')
+FileExistsError: [WinError 183] 当文件已存在时，无法创建该文件。: './img/full/2a4b4efce50bafc6a7cd28b3f8c3e4d9a696ebad.jpg' -> './img/seo外链怎么优化？  .jpg'
+2019-05-20 14:25:05 [scrapy.core.scraper] ERROR: Error processing {'content': ' \xa0\n'
+            '今天看到一个有意思的问题：seo和php哪个值得学？从大方向考虑seo属于营销类范畴，php则属于编程类范畴，其不再一个对比面上。万物总有联系，seo与php是有很强的关联的，诸如很多的建站系统都是php做的，做seo的时候懂得php会提高工作效率；如果懂php，则...',
+ 'count': ' 5194℃',
+ 'date': ' 2019-03-04',
+ 'image': 'https://www.xminseo.com/wp-content/uploads/2019/03/1.jpg',
+ 'like': '4',
+ 'title': 'seo和php哪个值得学  ',
+ 'url': 'https://www.xminseo.com/14574.html'}
+Traceback (most recent call last):
+  File "d:\python3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\向寒°\appdata\local\temp\two-1558331641-e_amo428.egg\two\pipelines.py", line 29, in item_completed
+    os.rename('./img/'+image_path,'./img/'+item['title']+'.jpg')
+FileExistsError: [WinError 183] 当文件已存在时，无法创建该文件。: './img/full/15c68ab8fe6f1e66bf044d7d85bccaca269f1b65.jpg' -> './img/seo和php哪个值得学  .jpg'
+2019-05-20 14:25:05 [scrapy.core.scraper] ERROR: Error processing {'content': ' \xa0\n'
+            '时间倒退10年，我是不信付费学习造就赚钱能力这句话。很难想象这是我讲的。在互联网上面摸爬滚打，我算是真正的领悟到了这句话的真谛了。之前，我干培训，教大家互联网创业，教了钱的，多多少少赚了一笔。没交钱现在基本上还是和以前一样穷光蛋一个，特别是我的亲戚。一听我的搞这方面...',
+ 'count': ' 5458℃',
+ 'date': ' 2019-02-22',
+ 'image': 'https://www.xminseo.com/wp-content/uploads/2019/02/1-5.jpg',
+ 'like': '14',
+ 'title': '付费学习造就赚钱能力  ',
+ 'url': 'https://www.xminseo.com/14562.html'}
+Traceback (most recent call last):
+  File "d:\python3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\向寒°\appdata\local\temp\two-1558331641-e_amo428.egg\two\pipelines.py", line 29, in item_completed
+    os.rename('./img/'+image_path,'./img/'+item['title']+'.jpg')
+FileExistsError: [WinError 183] 当文件已存在时，无法创建该文件。: './img/full/b3e8f3baf9b3adeae4f8af297018555210cfde1b.jpg' -> './img/付费学习造就赚钱能力  .jpg'
+2019-05-20 14:25:05 [scrapy.core.scraper] ERROR: Error processing {'content': ' \xa0\n'
+            'seo工作是可以流程化的，seo工作不是杂乱无章的，在必要的时候，在优化网站之前制作一张seo工作流程图，可以看清形势，也可以指导我们具体的工作内容很有必要，古语磨刀不误砍柴工也是这个意思。\n'
+            '假设没有相应的seo计划或者说流程，那么我们从事搜索引擎优化工作的效率是显...',
+ 'count': ' 9106℃',
+ 'date': ' 2019-02-21',
+ 'image': 'https://www.xminseo.com/wp-content/uploads/2019/02/1-4.jpg',
+ 'like': '6',
+ 'title': '一张图详解seo工作流程  ',
+ 'url': 'https://www.xminseo.com/14559.html'}
+Traceback (most recent call last):
+  File "d:\python3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\向寒°\appdata\local\temp\two-1558331641-e_amo428.egg\two\pipelines.py", line 29, in item_completed
+    os.rename('./img/'+image_path,'./img/'+item['title']+'.jpg')
+FileExistsError: [WinError 183] 当文件已存在时，无法创建该文件。: './img/full/df05ff9620e26d4f54a35d686d1da1f2e7028ddd.jpg' -> './img/一张图详解seo工作流程  .jpg'
+2019-05-20 14:25:05 [scrapy.core.scraper] ERROR: Error processing {'content': ' '
+            '之前一直称的是BAT，百度市场超过阿里腾讯。就现在，可以说不是同一个级别了。江湖传言，腾讯赚的小孩子钱，阿里赚的是电商的钱，百度赚的是黑心医院的钱。\n'
+            '\n'
+            '我们来趴一趴百度现在的排名。基本上你去搜索一个关键词，前面少不了几个竞价位，用户随便点点，钱就到手。竞价位过后，就是自然排名了，...',
+ 'count': ' 7638℃',
+ 'date': ' 2019-02-21',
+ 'image': 'https://www.xminseo.com/wp-content/uploads/2019/02/1.png',
+ 'like': '18',
+ 'title': '百度已死，还在疯狂的收割  ',
+ 'url': 'https://www.xminseo.com/14555.html'}
+Traceback (most recent call last):
+  File "d:\python3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\向寒°\appdata\local\temp\two-1558331641-e_amo428.egg\two\pipelines.py", line 29, in item_completed
+    os.rename('./img/'+image_path,'./img/'+item['title']+'.jpg')
+FileExistsError: [WinError 183] 当文件已存在时，无法创建该文件。: './img/full/31a5b465a108dbeba4314ca0749b496ea017b1ec.jpg' -> './img/百度已死，还在疯狂的收割  .jpg'
+2019-05-20 14:25:05 [scrapy.core.scraper] ERROR: Error processing {'content': ' \xa0\n'
+            '正常情况下单独优化网站的某一个点无法让网站发挥出最大的seo效果，通过对网站进行系统化诊断，以详尽的实用的网站seo整体优化方案来指导我们对网站进行优化，则是效果更好的方式。\n'
+            '统筹全局才能运筹帷幄，假设有一份针对特定网站的优化方案并严格执行，那么最终的seo优化结果...',
+ 'count': ' 8093℃',
+ 'date': ' 2019-02-15',
+ 'image': 'https://www.xminseo.com/wp-content/uploads/2019/02/1-2.jpg',
+ 'like': '8',
+ 'title': '一份实用的seo整体优化方案  ',
+ 'url': 'https://www.xminseo.com/14549.html'}
+Traceback (most recent call last):
+  File "d:\python3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\向寒°\appdata\local\temp\two-1558331641-e_amo428.egg\two\pipelines.py", line 29, in item_completed
+    os.rename('./img/'+image_path,'./img/'+item['title']+'.jpg')
+FileExistsError: [WinError 183] 当文件已存在时，无法创建该文件。: './img/full/9387b17ebe32a6b96d790e3956c73d44a9996463.jpg' -> './img/一份实用的seo整体优化方案  .jpg'
+2019-05-20 14:25:05 [scrapy.core.scraper] ERROR: Error processing {'content': ' '
+            '在这个大众创业,万众创新的互联网时代，创业者可谓是前赴后继。真正创出一番事业的寥寥无几。在此上科互联商学院给各位创业者3点建议，期待你们创业成功，走上人生巅峰。\n'
+            '\n'
+            '1、创业不是好玩，不要冲着情怀，拍脑袋的创业。我见过的很多创业者都是出去对某行业的专注，处于对某产品的特别的迷恋，就...',
+ 'count': ' 4772℃',
+ 'date': ' 2019-02-20',
+ 'image': 'https://www.xminseo.com/wp-content/uploads/2019/02/1-3.jpg',
+ 'like': '5',
+ 'title': '许望上：个人如何在互联网上低成本创业  ',
+ 'url': 'https://www.xminseo.com/14552.html'}
+Traceback (most recent call last):
+  File "d:\python3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\向寒°\appdata\local\temp\two-1558331641-e_amo428.egg\two\pipelines.py", line 29, in item_completed
+    os.rename('./img/'+image_path,'./img/'+item['title']+'.jpg')
+FileExistsError: [WinError 183] 当文件已存在时，无法创建该文件。: './img/full/d28bbf1c45807acecc826da3626c2dde271860f1.jpg' -> './img/许望上：个人如何在互联网上低成本创业  .jpg'
+2019-05-20 14:25:05 [scrapy.core.scraper] ERROR: Error processing {'content': ' \xa0\n'
+            'seo是一种职业，也是一种工作。学习seo的目的就是增加收入，很多初入搜索引擎优化行业的人都在考虑seo去哪里可以接外包的工作，实际上，seo外包渠道有很多，这个本不是大问题，真正的问题是自己的技术是否得当，一技在手，前途无忧。接seo外包工作的渠道不少，选择适合自...',
+ 'count': ' 7190℃',
+ 'date': ' 2019-02-13',
+ 'image': 'https://www.xminseo.com/wp-content/uploads/2019/02/1-1.jpg',
+ 'like': '3',
+ 'title': 'seo去哪里可以接外包的工作  ',
+ 'url': 'https://www.xminseo.com/14545.html'}
+Traceback (most recent call last):
+  File "d:\python3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\向寒°\appdata\local\temp\two-1558331641-e_amo428.egg\two\pipelines.py", line 29, in item_completed
+    os.rename('./img/'+image_path,'./img/'+item['title']+'.jpg')
+FileExistsError: [WinError 183] 当文件已存在时，无法创建该文件。: './img/full/ce46d9e956600b330d014de7ece5b136a23e332b.jpg' -> './img/seo去哪里可以接外包的工作  .jpg'
+2019-05-20 14:25:05 [scrapy.core.scraper] ERROR: Error processing {'content': ' \xa0\n'
+            '系统化的seo知识点很多，哪些是先要学会的，哪些是可以延后的呢?一般来看，与seo本身强相关的知识点如网站建设、seo技术本身等需要先学习并掌握，与seo弱相关的知识点如服务器知识可以延后学习。\n'
+            '学习任何东西都有主次之分，将重点点重点掌握，将不重要的点一般掌握，是提...',
+ 'count': ' 12552℃',
+ 'date': ' 2019-01-26',
+ 'image': 'https://www.xminseo.com/wp-content/uploads/2019/01/1-9.jpg',
+ 'like': '15',
+ 'title': '学seo先要学会什么?  ',
+ 'url': 'https://www.xminseo.com/14537.html'}
+Traceback (most recent call last):
+  File "d:\python3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\向寒°\appdata\local\temp\two-1558331641-e_amo428.egg\two\pipelines.py", line 29, in item_completed
+    os.rename('./img/'+image_path,'./img/'+item['title']+'.jpg')
+OSError: [WinError 123] 文件名、目录名或卷标语法不正确。: './img/full/56da5b8c759357b489e4abc06ce9854954e2a392.jpg' -> './img/学seo先要学会什么?  .jpg'
+2019-05-20 14:25:05 [scrapy.core.scraper] ERROR: Error processing {'content': ' \xa0\n'
+            '看到一个问题：seo是属于技术还是营销？实际上这个问题没有严格的回答。总体来看seo是属于营销的范畴的，有一个经典的说法：seo归类于sem，seo归类于网络营销，网络营销归类于大营销范畴。\n'
+            '\n'
+            '说seo属于技术也没有错误，不是所有人都能把网站既定关键词排名做到相应的...',
+ 'count': ' 9713℃',
+ 'date': ' 2019-02-01',
+ 'image': 'https://www.xminseo.com/wp-content/uploads/2019/02/1.jpg',
+ 'like': '8',
+ 'title': 'seo属于技术还是营销  ',
+ 'url': 'https://www.xminseo.com/14542.html'}
+Traceback (most recent call last):
+  File "d:\python3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\向寒°\appdata\local\temp\two-1558331641-e_amo428.egg\two\pipelines.py", line 29, in item_completed
+    os.rename('./img/'+image_path,'./img/'+item['title']+'.jpg')
+FileExistsError: [WinError 183] 当文件已存在时，无法创建该文件。: './img/full/892c4aba73b7b38b5a724c4efcfeed24b8f7f6b8.jpg' -> './img/seo属于技术还是营销  .jpg'
+2019-05-20 14:25:05 [scrapy.core.scraper] ERROR: Error processing {'content': ' \xa0\n'
+            'seo运营有出路，sem运营也有出路，几乎任何一个行业都是有前途的，区别点在于某些行业天生有更高的发展，有些行业则不然。这个问题看似简单实际复杂，为什么又这么一说？原因在于想要什么样的出路，且决定出路的因素不止是技术本身，还有情商。\n'
+            '相对来讲，sem运营比之于seo...',
+ 'count': ' 12308℃',
+ 'date': ' 2019-01-22',
+ 'image': 'https://www.xminseo.com/wp-content/uploads/2019/01/1-7.jpg',
+ 'like': '5',
+ 'title': 'sem运营有出路吗  ',
+ 'url': 'https://www.xminseo.com/14528.html'}
+Traceback (most recent call last):
+  File "d:\python3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\向寒°\appdata\local\temp\two-1558331641-e_amo428.egg\two\pipelines.py", line 29, in item_completed
+    os.rename('./img/'+image_path,'./img/'+item['title']+'.jpg')
+FileExistsError: [WinError 183] 当文件已存在时，无法创建该文件。: './img/full/09ecd1b58ccf79b46c2e1c3a445a8836127798ed.jpg' -> './img/sem运营有出路吗  .jpg'
+2019-05-20 14:25:05 [scrapy.core.scraper] ERROR: Error processing {'content': ' \xa0\n'
+            '淘宝有一套自己的排名规则，淘宝seo也是不少人热衷研究的问题，要说淘宝seo最核心的是什么？答案是相关性。细化来讲，从标题写作到类目填写，均需要一一对应，将合适的产品或者服务通过文字以及类目归类的方式放置到合适的类目中，淘宝seo就成功了一大半。\n'
+            '\n'
+            '实际上，搜索引擎...',
+ 'count': ' 10874℃',
+ 'date': ' 2019-01-26',
+ 'image': 'https://www.xminseo.com/wp-content/uploads/2019/01/1-8.jpg',
+ 'like': '11',
+ 'title': '淘宝seo最核心是什么  ',
+ 'url': 'https://www.xminseo.com/14534.html'}
+Traceback (most recent call last):
+  File "d:\python3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\向寒°\appdata\local\temp\two-1558331641-e_amo428.egg\two\pipelines.py", line 29, in item_completed
+    os.rename('./img/'+image_path,'./img/'+item['title']+'.jpg')
+FileExistsError: [WinError 183] 当文件已存在时，无法创建该文件。: './img/full/251bd02f4fbee3ef8c3a3da945cb5c40a4cebbaa.jpg' -> './img/淘宝seo最核心是什么  .jpg'
+2019-05-20 14:25:05 [scrapy.core.scraper] ERROR: Error processing {'content': ' \xa0\n'
+            '很多时候由于各种原因需要对网站名称进行修改，这种行为是会影响seo的，从结果分析来看，改得好则有利于网站的seo结果，反之亦反。网站名称修改可以是修改首页标题，也可以是修改栏目名称，极端情况下也有可能是内容页。也就是说：如何页面的标题修改都可能会有，任何页面的标题修...',
+ 'count': ' 12902℃',
+ 'date': ' 2019-01-19',
+ 'image': 'https://www.xminseo.com/wp-content/uploads/2019/01/1-6.jpg',
+ 'like': '7',
+ 'title': '网站名称修改对seo的影响分析  ',
+ 'url': 'https://www.xminseo.com/14525.html'}
+Traceback (most recent call last):
+  File "d:\python3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\向寒°\appdata\local\temp\two-1558331641-e_amo428.egg\two\pipelines.py", line 29, in item_completed
+    os.rename('./img/'+image_path,'./img/'+item['title']+'.jpg')
+FileExistsError: [WinError 183] 当文件已存在时，无法创建该文件。: './img/full/9cf6e0e06df1b608efc59dd41a2b7ef9cc3dabdc.jpg' -> './img/网站名称修改对seo的影响分析  .jpg'
+2019-05-20 14:25:05 [scrapy.core.scraper] ERROR: Error processing {'content': ' \xa0\n'
+            '很多人都在找seo文章手写方法，哪里有相应的方法介绍呢？很多地方都能找到seo文章写作规范方面的文章，找到不难，难点在于如何甄别其准确性。任何从事seo的人都可以就什么是高质量的文章大谈阔谈，这样的背景下如果分辨不出seo文章相应的质量度与正确性，就会走弯路。\n'
+            '\n'
+            '在...',
+ 'count': ' 12644℃',
+ 'date': ' 2019-01-16',
+ 'image': 'https://www.xminseo.com/wp-content/uploads/2019/01/1-5.jpg',
+ 'like': '8',
+ 'title': '哪里有seo文章手写方法  ',
+ 'url': 'https://www.xminseo.com/14522.html'}
+Traceback (most recent call last):
+  File "d:\python3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\向寒°\appdata\local\temp\two-1558331641-e_amo428.egg\two\pipelines.py", line 29, in item_completed
+    os.rename('./img/'+image_path,'./img/'+item['title']+'.jpg')
+FileExistsError: [WinError 183] 当文件已存在时，无法创建该文件。: './img/full/fea9fbb2ebdbe93fc37e46b484b1888a1b611102.jpg' -> './img/哪里有seo文章手写方法  .jpg'
+2019-05-20 14:25:05 [scrapy.core.scraper] ERROR: Error processing {'content': ' \xa0\n'
+            'seo是有可能转到编程的，之所以这么讲，是因为技术是存在变化不大的，而人是活的。因为各种原因不愿意继续从事seo工作而考虑转行，就可以转到编程去。话说别人能编程，自己为什么不能，下定决心，投入必要的时间和精力，就能从seo转到编程。\n'
+            '\n'
+            '一般来看，seo很像高中时候的...',
+ 'count': ' 11758℃',
+ 'date': ' 2019-01-15',
+ 'image': 'https://www.xminseo.com/wp-content/uploads/2019/01/1-4.jpg',
+ 'like': '7',
+ 'title': 'seo有可能转到编程吗  ',
+ 'url': 'https://www.xminseo.com/14519.html'}
+Traceback (most recent call last):
+  File "d:\python3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\向寒°\appdata\local\temp\two-1558331641-e_amo428.egg\two\pipelines.py", line 29, in item_completed
+    os.rename('./img/'+image_path,'./img/'+item['title']+'.jpg')
+FileExistsError: [WinError 183] 当文件已存在时，无法创建该文件。: './img/full/eb144efef6d532de92bbab7591c357519c27872f.jpg' -> './img/seo有可能转到编程吗  .jpg'
+2019-05-20 14:25:05 [scrapy.core.scraper] ERROR: Error processing {'content': ' \xa0\n'
+            'seo行业好与不好与个人或团队的优化技术本身密切相关。基本上各个细分行业都有其领域中的翘楚，古话360行行行出状元也是这个意思。seo行业需求旺盛，在优化技术与思维得当的情况下，能获取很大的财富或者说收入。\n'
+            '\n'
+            '从不好的方面讲，seo是入门简单的行业，但如果想成为se...',
+ 'count': ' 9524℃',
+ 'date': ' 2019-01-15',
+ 'image': 'https://www.xminseo.com/wp-content/uploads/2019/01/1-3.jpg',
+ 'like': '6',
+ 'title': 'seo行业好不好  ',
+ 'url': 'https://www.xminseo.com/14516.html'}
+Traceback (most recent call last):
+  File "d:\python3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "c:\users\向寒°\appdata\local\temp\two-1558331641-e_amo428.egg\two\pipelines.py", line 29, in item_completed
+    os.rename('./img/'+image_path,'./img/'+item['title']+'.jpg')
+FileExistsError: [WinError 183] 当文件已存在时，无法创建该文件。: './img/full/ff487842af89583e6234ba4002fbb0182f8866d0.jpg' -> './img/seo行业好不好  .jpg'
+2019-05-20 14:25:05 [scrapy.core.engine] INFO: Closing spider (finished)
+2019-05-20 14:25:05 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 220,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 20880,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'file_count': 25,
+ 'file_status_count/uptodate': 25,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2019, 5, 20, 6, 25, 5, 197931),
+ 'log_count/DEBUG': 26,
+ 'log_count/ERROR': 25,
+ 'log_count/INFO': 9,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2019, 5, 20, 6, 25, 3, 894987)}
+2019-05-20 14:25:05 [scrapy.core.engine] INFO: Spider closed (finished)

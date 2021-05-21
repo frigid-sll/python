@@ -1,0 +1,7 @@
+
+                # meta是向下个方法里传递参数 以字典的形式  key:value 可以传递多个参数  dont_filter是url去重
+                yield scrapy.Request(url=item['content_urls'],callback=self.crawlContent,meta={'item':item},dont_filter=True)
+
+
+
+yield scrapy.Request(url=self.url+str(self.num),callback=self.parse)

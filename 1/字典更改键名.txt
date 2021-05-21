@@ -1,0 +1,9 @@
+思路：先删除原键值对，保存值，然后以新键插入字典
+
+格式：dict[newkey] = dict.pop(key)
+
+d = {'a':1, 'aa':11}
+d['b'] = d.pop('a')
+d['bb'] = d.pop('aa')
+print(d)
+#输出：{'b': 1, 'bb': 11}
